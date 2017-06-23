@@ -18,7 +18,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias: {
+    alias: { //创建 import/require 的别名
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
     }
@@ -44,7 +44,7 @@ module.exports = {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url-loader',
       options: {
-        limit: 10000,
+        limit: 10000, //图片小于10000字节时以base64的方式引用
         name: utils.assetsPath('img/[name].[hash:7].[ext]')
       }
     }, {

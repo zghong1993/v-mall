@@ -35,8 +35,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       },
       sourceMap: true
     }),
-    // extract css into its own file
-    new ExtractTextPlugin({
+    new ExtractTextPlugin({ //将js中引入的css分离的插件
       filename: utils.assetsPath('css/[name].[contenthash].css')
     }),
     // Compress extracted CSS. We are using this plugin so that possible
@@ -46,28 +45,26 @@ var webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
-    // generate dist index.html with correct asset hash for caching.
-    // you can customize output by editing /index.html
-    // see https://github.com/ampedandwired/html-webpack-plugin
+   //生成html的插件,引入css文件和js文件
     new HtmlWebpackPlugin({
       filename: config.build.index,
       template: 'index.html',
       inject: true,
       minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-        // more options:
-        // https://github.com/kangax/html-minifier#options-quick-reference
+        removeComments: true, //删除html中的注释代码
+        collapseWhitespace: true, //删除html中的空白符
+        removeAttributeQuotes: true //删除html元素中属性的引号
+          // more options:
+          // https://github.com/kangax/html-minifier#options-quick-reference
       },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      //按dependency的顺序引入
       chunksSortMode: 'dependency'
     }),
-    // split vendor js into its own file
+    //分离公共js到vendor中
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: function (module, count) {
-        // any required modules inside node_modules are extracted to vendor
+      minChunks: function(module, count) {
+        // 声明公共的模块来自node_modules文件夹
         return (
           module.resource &&
           /\.js$/.test(module.resource) &&
@@ -77,13 +74,12 @@ var webpackConfig = merge(baseWebpackConfig, {
         )
       }
     }),
-    // extract webpack runtime and module manifest to its own file in order to
-    // prevent vendor hash from being updated whenever app bundle is updated
+   //将运行时代码提取到单独的manifest文件中，防止其影响vendor.js
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
     }),
-    // copy custom static assets
+    //复制静态资源,将static文件内的内容复制到指定文件夹
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
