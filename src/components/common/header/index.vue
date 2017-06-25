@@ -1,7 +1,7 @@
 <template>
-  <header>
-    header
-  </header>
+  <mt-header fixed>
+   <span slot="left">北京市</span>
+  </mt-header>
 </template>
 
 <script src='./index.js'>
