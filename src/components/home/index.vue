@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
-    <AppHeader/>
-    <div class='scroll-wrap'>
+    <AppHeader :colorIsActive='colorIsActive' />
+    <div class='scroll-wrap' @scroll='handleScroll'>
       <div class='swiper'>
         <mt-swipe :auto="4000" :show-indicators="false">
           <mt-swipe-item><img src="./images/banner1.jpg"></mt-swipe-item>
@@ -9,7 +9,7 @@
           <mt-swipe-item><img src="./images/banner3.jpg"></mt-swipe-item>
         </mt-swipe>
       </div>
-      <div style='height:900px;'></div>
+      <div style='height:15000px;'></div>
      aa
     </div>
 

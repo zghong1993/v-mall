@@ -1,9 +1,3 @@
-import {
-  Toast,
-
-} from 'mint-ui'
-
-
 import AppHeader from '@/components/common/header/index.vue'
 import AppFooter from '@/components/common/footer/index.vue'
 
@@ -16,16 +10,17 @@ export default {
   },
   data() {
     return {
-      msg: 'index',
+      colorIsActive: false,
     }
   },
   methods: {
-    handleClick() {
-      Toast({
-        message: '提示',
-        position: 'center',
-        duration: 5000,
-      })
+    handleScroll(e) {
+      const scrollTop = e.target.scrollTop
+      if (scrollTop > 50) {
+        this.colorIsActive = true
+      } else {
+        this.colorIsActive = false
+      }
     },
   },
 }
