@@ -2,9 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Mint from 'mint-ui'
-import 'normalize.css'
 import 'mint-ui/lib/style.css'
+
+import './assets/css/normalize.css'
 import './assets/css/reset.less'
+
 
 import App from './app'
 import router from './router'

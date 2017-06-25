@@ -1,11 +1,12 @@
 <template>
-  <div class="hello">
-  ssssss
-    <h1 @click='handleClick'>{{ msg }}</h1>
-  </div>
+  <header>
+    header
+  </header>
 </template>
 
-<script src='./index.js'></script>
+<script src='./index.js'>
+
+</script>
 
 <style lang='less' scoped>
   @import './index.less';

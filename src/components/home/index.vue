@@ -1,8 +1,15 @@
 <template>
-  <div class="hello">
-    <appHeader/>
-    <h1>{{ msg }}</h1>
-    <mt-button @click.native="handleClick">按钮</mt-button>
+  <div>
+    <AppHeader/>
+    <div class='home'>
+    <button @click='handleClick'>dddd</button>
+    <mt-swipe :auto="4000">
+      <mt-swipe-item>ssssssssssss</mt-swipe-item>
+      <mt-swipe-item>ssssssssssss</mt-swipe-item>
+      <mt-swipe-item>aaaaaaaaaaaaaa</mt-swipe-item>
+    </mt-swipe>
+    </div>
+    <AppFooter/>
   </div>
 </template>
 

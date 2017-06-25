@@ -1,12 +1,18 @@
 import {
   Toast,
+
 } from 'mint-ui'
-import Header from '@/components/common/header/index.vue'
+
+
+import AppHeader from '@/components/common/header/index.vue'
+import AppFooter from '@/components/common/footer/index.vue'
 
 export default {
   name: 'Home',
   components: {
-    appHeader: Header,
+    AppHeader,
+    AppFooter,
+
   },
   data() {
     return {
@@ -17,7 +23,7 @@ export default {
     handleClick() {
       Toast({
         message: '提示',
-        position: 'bottom',
+        position: 'center',
         duration: 5000,
       })
     },

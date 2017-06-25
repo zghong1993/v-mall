@@ -1,5 +1,5 @@
 export default {
-  name: 'header',
+  name: 'footer',
   data() {
     return {}
   },
