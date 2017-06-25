@@ -1,12 +1,16 @@
 import {
   Toast,
 } from 'mint-ui'
+import Header from '@/components/common/header/index.vue'
 
-const Hello = {
-  name: 'hello',
+export default {
+  name: 'Home',
+  components: {
+    appHeader: Header,
+  },
   data() {
     return {
-      msg: 'hello',
+      msg: 'index',
     }
   },
   methods: {
@@ -19,5 +23,3 @@ const Hello = {
     },
   },
 }
-
-export default Hello

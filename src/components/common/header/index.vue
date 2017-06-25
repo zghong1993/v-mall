@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-    <appHeader/>
-    <h1>{{ msg }}</h1>
-    <mt-button @click.native="handleClick">按钮</mt-button>
+  ssssss
+    <h1 @click='handleClick'>{{ msg }}</h1>
   </div>
 </template>
 
