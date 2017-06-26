@@ -1,6 +1,9 @@
 import AppHeader from '@/components/common/header/index.vue'
 import AppFooter from '@/components/common/footer/index.vue'
 
+import homeService from '@/service'
+console.log(homeService)
+
 export default {
   name: 'Home',
   components: {
