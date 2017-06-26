@@ -8,7 +8,6 @@
  */
 
 const baseUrl = ''
-const routerMode = 'history'
 const imgBaseUrl = ''
 
 
@@ -21,6 +20,5 @@ if (process.env.NODE_ENV === 'development') {
 
 export {
   baseUrl,
-  routerMode,
   imgBaseUrl,
 }

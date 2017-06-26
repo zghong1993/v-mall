@@ -2,7 +2,9 @@ import AppHeader from '@/components/common/header/index.vue'
 import AppFooter from '@/components/common/footer/index.vue'
 import { homeService } from '@/service'
 
-homeService.hotcity().then(data => { console.log(data) })
+homeService.hotcity().then(data => {
+  console.log(JSON.parse(data[0].value))
+})
 
 export default {
   name: 'Home',
