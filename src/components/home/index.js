@@ -1,8 +1,6 @@
 import AppHeader from '@/components/common/header/index.vue'
 import AppFooter from '@/components/common/footer/index.vue'
-
-import homeService from '@/service'
-console.log(homeService)
+import { homeService } from '@/service'
 
 export default {
   name: 'Home',
@@ -17,6 +15,7 @@ export default {
     }
   },
   methods: {
+    // toggle header bakground
     handleScroll(e) {
       const scrollTop = e.target.scrollTop
       if (scrollTop > 50) {

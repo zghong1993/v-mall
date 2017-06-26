@@ -8,45 +8,45 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
   <script>
-    ! function(e) {
-      function t(a) {
-        if (i[a]) return i[a].exports;
-        var n = i[a] = {
-          exports: {},
-          id: a,
-          loaded: !1
-        };
-        return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
-      }
-      var i = {};
-      return t.m = e, t.c = i, t.p = "", t(0)
-    }([function(e, t) {
-      "use strict";
-      Object.defineProperty(t, "__esModule", {
-        value: !0
-      });
-      var i = window;
-      t["default"] = i.flex = function(e, t) {
-        var a = e || 100,
-          n = t || 1,
-          r = i.document,
-          o = navigator.userAgent,
-          d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
-          l = o.match(/U3\/((\d+|\.){5,})/i),
-          c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
-          p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
-          s = i.devicePixelRatio || 1;
-        p || d && d[1] > 534 || c || (s = 1);
-        var u = 1 / s,
-          m = r.querySelector('meta[name="viewport"]');
-        m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
-      }, e.exports = t["default"]
-    }]);
-    flex(100, 1);
+  ! function(e) {
+    function t(a) {
+      if (i[a]) return i[a].exports;
+      var n = i[a] = {
+        exports: {},
+        id: a,
+        loaded: !1
+      };
+      return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+    }
+    var i = {};
+    return t.m = e, t.c = i, t.p = "", t(0)
+  }([function(e, t) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+    var i = window;
+    t["default"] = i.flex = function(e, t) {
+      var a = e || 100,
+        n = t || 1,
+        r = i.document,
+        o = navigator.userAgent,
+        d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+        l = o.match(/U3\/((\d+|\.){5,})/i),
+        c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+        p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+        s = i.devicePixelRatio || 1;
+      p || d && d[1] > 534 || c || (s = 1);
+      var u = 1 / s,
+        m = r.querySelector('meta[name="viewport"]');
+      m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+    }, e.exports = t["default"]
+  }]);
+  flex(100, 1);
+
   </script>
   <!--ali font-->
   <link href="//at.alicdn.com/t/font_2a5kmajtwt57b9.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -54,39 +54,40 @@
   <!-- built files will be auto injected -->
 </body>
 <script>
-  var overscroll = function(el) {
-    el.addEventListener('touchstart', function() {
-      var top = el.scrollTop,
-        totalScroll = el.scrollHeight,
-        currentScroll = top + el.offsetHeight
-        //If we're at the top or the bottom of the containers
-        //scroll, push up or down one pixel.
-        //
-        //this prevents the scroll from "passing through" to
-        //the body.
-      if (top === 0) {
-        el.scrollTop = 1
-      } else if (currentScroll === totalScroll) {
-        el.scrollTop = top - 1
-      }
-    })
-    el.addEventListener('touchmove', function(evt) {
-      //if the content is actually scrollable, i.e. the content is long enough
-      //that scrolling can occur
-      if (el.offsetHeight < el.scrollHeight)
-        evt._isScroller = true
-    })
-  }
-  window.onload = function() {
-    overscroll(document.querySelector('.scroll-wrap'));
-  }
-  document.body.addEventListener('touchmove', function(evt) {
-    //In this case, the default behavior is scrolling the body, which
-    //would result in an overflow.  Since we don't want that, we preventDefault.
-    if (!evt._isScroller) {
-      evt.preventDefault()
+var overscroll = function(el) {
+  el.addEventListener('touchstart', function() {
+    var top = el.scrollTop,
+      totalScroll = el.scrollHeight,
+      currentScroll = top + el.offsetHeight
+    //If we're at the top or the bottom of the containers
+    //scroll, push up or down one pixel.
+    //
+    //this prevents the scroll from "passing through" to
+    //the body.
+    if (top === 0) {
+      el.scrollTop = 1
+    } else if (currentScroll === totalScroll) {
+      el.scrollTop = top - 1
     }
   })
+  el.addEventListener('touchmove', function(evt) {
+    //if the content is actually scrollable, i.e. the content is long enough
+    //that scrolling can occur
+    if (el.offsetHeight < el.scrollHeight)
+      evt._isScroller = true
+  })
+}
+window.onload = function() {
+  overscroll(document.querySelector('.scroll-wrap'));
+}
+document.body.addEventListener('touchmove', function(evt) {
+  //In this case, the default behavior is scrolling the body, which
+  //would result in an overflow.  Since we don't want that, we preventDefault.
+  if (!evt._isScroller) {
+    evt.preventDefault()
+  }
+})
+
 </script>
 
 </html>

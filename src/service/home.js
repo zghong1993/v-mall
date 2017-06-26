@@ -1,7 +1,10 @@
-export const getHomeInfo = () => {
+ const getHomeInfo = () => {}
+ const hotcity = () => fetch('/v1/cities', {
+   type: 'hot',
+ })
 
-}
 
-export const hotcity = () => fetch('/v1/cities', {
-  type: 'hot',
-})
+ export default {
+   getHomeInfo,
+   hotcity,
+ }
