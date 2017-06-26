@@ -1,3 +1,4 @@
+// code -> perference -> setting
 {
   "editor.fontSize": 16,
   "editor.lineHeight": 22,
@@ -38,5 +39,6 @@
       "html",
       "vue"
     ]
-  }
+  },
+  "beautify.ignore": ["**/dist/**/*", "**/node_modules/**/*"]
 }
