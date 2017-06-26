@@ -31,7 +31,6 @@ const localStorage = { setStore, getStore, removeStore }
 const getPosition = async() => {
   /* eslint-disable no-undef */
   const mapObj = new AMap.Map('iCenter')
-  /* eslint-disable no-shadow */
   return new Promise((resove) => {
     mapObj.plugin('AMap.Geolocation', () => {
       const geolocation = new AMap.Geolocation({
@@ -40,12 +39,9 @@ const getPosition = async() => {
         noGeoLocation: 0,
         extensions: 'all',
       })
-      /* eslint-disable no-shadow */
-      resove(new Promise((resove) => {
-        geolocation.getCurrentPosition((status, result) => {
-          resove({ status, result })
-        })
-      }))
+      geolocation.getCurrentPosition((status, result) => {
+        resove({ status, result })
+      })
     })
   })
 }
