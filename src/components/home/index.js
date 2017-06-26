@@ -1,5 +1,8 @@
 import AppHeader from '@/components/common/header/index.vue'
 import AppFooter from '@/components/common/footer/index.vue'
+import { homeSer } from '@/service'
+
+import { formatPrice, currency } from '@/config/filter'
 
 export default {
   name: 'Home',
@@ -8,13 +11,18 @@ export default {
     AppFooter,
 
   },
+  filters: {
+    formatPrice,
+    currency,
+  },
   data() {
     return {
       colorIsActive: false,
+      homeList: '',
     }
   },
-  mounted() {
-
+  created() {
+    homeSer.getHomeList().then(d => this.homeList = d)
   },
   methods: {
     // toggle header bakground

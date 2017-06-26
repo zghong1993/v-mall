@@ -38,11 +38,10 @@ module.exports = {
     'semi': ['error', 'never'],
     'global-require': 0,
     'import/no-dynamic-require': 0,
-    'no-return-assign': [2, 'always'],
+    'no-return-assign': [0],
     'no-param-reassign': 0,
     'consistent-return': 0,
     'arrow-parens': 0,
     'space-before-function-paren': 0,
-
   }
 }

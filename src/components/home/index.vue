@@ -9,18 +9,23 @@
           <mt-swipe-item><img src="./images/banner3.jpg"></mt-swipe-item>
         </mt-swipe>
       </div>
-      <div style='height:15000px;'></div>
-     aa
+      <div class='home-list'>
+        <figure class='item' v-for='item in homeList' :key='item.id'>
+          <img :src="item.mainImage">
+          <p>{{item.name}}</p>
+          <p class='clear'><span class='price'>{{item.lowPrice | formatPrice | currency}}</span><span class='iconfont icon-gouwuche pull-right'></span></p>
+          <p>{{item.shopName}}</p>
+        </figure>
+      </div>
     </div>
-
     <AppFooter/>
   </div>
 </template>
-
 <script src='./index.js'>
 
-</script>
 
+</script>
 <style lang='less' scoped>
-  @import './index.less';
+@import './index.less';
+
 </style>

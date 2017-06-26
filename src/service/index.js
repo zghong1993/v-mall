@@ -1,8 +1,8 @@
-import homeService from './home'
-import categoryService from './category'
+import homeSer from './home'
+import categorySer from './category'
 
 
 export {
-  homeService,
-  categoryService,
+  homeSer,
+  categorySer,
 }

@@ -1,11 +1,14 @@
-  html, body {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  html,
+  body {
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
   }
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: inherit;
   }
 
@@ -17,10 +20,15 @@
     font-size: 0.16rem;
   }
 
-  ul, li {
+  ul,
+  li {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  p {
+    margin: .1rem;
   }
   /**
  * 单行文本溢出 省略号
@@ -48,14 +56,47 @@
   #app {
     height: 100%;
     overflow: hidden;
+    font-size: .28rem;
   }
 
   .iconfont {
     font-size: .4rem;
+    &:before {
+      vertical-align: middle;
+    }
   }
 
   .scroll-wrap {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     -ms-scroll-chaining: chained;
+  }
+
+  .pull-left {
+    float: left;
+  }
+
+  .pull-right {
+    float: right;
+  }
+
+  .clear:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
   }
