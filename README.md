@@ -1,6 +1,8 @@
-# split vue file , components organize
+#  基于 vue-cli ,重新组织代码结构,便于团队开发,规划开发流程!
 
-> A Vue.js project
+vue2 +  vuex + vue-router + fetch + less + mint-ui
+
+> A Vue.js project by zghong
 
 ## Build Setup
 
