@@ -31,19 +31,21 @@ const localStorage = { setStore, getStore, removeStore }
 const getPosition = async() => {
   /* eslint-disable no-undef */
   const mapObj = new AMap.Map('iCenter')
-  mapObj.plugin('AMap.Geolocation', async() => {
-    const geolocation = new AMap.Geolocation({
-      timeout: 10000,
-      noIpLocate: 0,
-      noGeoLocation: 0,
-      extensions: 'all',
-    })
-    /* eslint-disable  any */
-    await new Promise((resove) => {
-      geolocation.getCurrentPosition((status, result) => {
-        const returnData = { status, result }
-        resove(returnData)
+  /* eslint-disable no-shadow */
+  return new Promise((resove) => {
+    mapObj.plugin('AMap.Geolocation', () => {
+      const geolocation = new AMap.Geolocation({
+        timeout: 10000,
+        noIpLocate: 0,
+        noGeoLocation: 0,
+        extensions: 'all',
       })
+      /* eslint-disable no-shadow */
+      resove(new Promise((resove) => {
+        geolocation.getCurrentPosition((status, result) => {
+          resove({ status, result })
+        })
+      }))
     })
   })
 }
