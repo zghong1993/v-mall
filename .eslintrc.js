@@ -41,6 +41,8 @@ module.exports = {
     'no-return-assign': [2, 'always'],
     'no-param-reassign': 0,
     'consistent-return': 0,
-    'arrow-parens': 0
+    'arrow-parens': 0,
+    'space-before-function-paren': 0
+
   }
 }
