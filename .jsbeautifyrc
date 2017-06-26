@@ -30,11 +30,12 @@
 
     // Set brace_style
     //  collapse: (old default) Put braces on the same line as control statements
-    //  collapse-preserve-inline: (new default) Same as collapse but better support for ES6 destructuring and other features. https://github.com/victorporof/Sublime-HTMLPrettify/issues/231
+    //  collapse,preserve-inline: (new default) Same as collapse but better support for ES6 destructuring and other features. https://github.com/victorporof/Sublime-HTMLPrettify/issues/231
     //  expand: Put braces on own line (Allman / ANSI style)
     //  end-expand: Put end braces on own line
     //  none: Keep them where they are
-    "brace_style": "collapse",
+    //["collapse","expand","end-expand","none","collapse,preserve-inline","expand,preserve-inline","end-expand,preserve-inline","none,preserve-inline"]
+    "brace_style": "collapse,preserve-inline",
     "break_chained_methods": false, // Break chained method calls across subsequent lines
     "e4x": false, // Pass E4X xml literals through untouched
     "end_with_newline": true, // End output with newline
