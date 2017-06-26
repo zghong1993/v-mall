@@ -1,0 +1,42 @@
+{
+  "editor.fontSize": 16,
+  "editor.lineHeight": 22,
+  "editor.wordWrap": "off",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.renderLineHighlight": "line",
+  "editor.selectionHighlight": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai",
+  "git.confirmSync": false,
+  "files.insertFinalNewline": true,
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "typescript.check.npmIsInstalled": false,
+  "extensions.ignoreRecommendations": true,
+  "git.enableSmartCommit": true,
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript",
+        "json"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautify"
+      ]
+    },
+    "css": [
+      "css",
+      "scss",
+      "less"
+    ],
+    "html": [
+      "htm",
+      "html",
+      "vue"
+    ]
+  }
+}

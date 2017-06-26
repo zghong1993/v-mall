@@ -1,6 +1,6 @@
 <template>
-  <mt-header fixed   v-bind:class="{ black: !colorIsActive ,white: colorIsActive}">
-   <span slot="left">北京市</span>
+  <mt-header fixed v-bind:class="{ black: !colorIsActive ,white: colorIsActive}">
+    <span slot="left">北京市</>
   </mt-header>
 </template>
 
