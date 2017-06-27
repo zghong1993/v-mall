@@ -21,7 +21,6 @@ export default {
     return {
       colorIsActive: false,
       homeList: '',
-      showSearch: false,
     }
   },
   created() {
@@ -36,12 +35,6 @@ export default {
       } else {
         this.colorIsActive = false
       }
-    },
-    handleShowSearch() {
-      this.showSearch = true
-    },
-    handleHideSearch() {
-      this.showSearch = false
     },
   },
 }

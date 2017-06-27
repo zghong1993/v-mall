@@ -1,5 +1,5 @@
 <template>
-  <div class='search' :class='{active:showSearch}'>
+  <div class='search' :class='{active:searchDisplay}'>
     <p>
       <input type="text" placeholder='搜索商品名称'>
       <span class='text-center' @click='hideSearch'>取消</span>

@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     showSearch() {
-      this.$emit('handleShowSearch')
+      this.$store.commit('TOGLE_SEARCH', true)
     },
   },
 }

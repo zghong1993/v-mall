@@ -4,9 +4,14 @@ export default {
     return {}
   },
   props: ['showSearch'],
+  computed: {
+    searchDisplay() {
+      return this.$store.state.showSearch
+    },
+  },
   methods: {
     hideSearch() {
-      this.$emit('handleHideSearch')
+      this.$store.commit('TOGLE_SEARCH', false)
     },
   },
 }
