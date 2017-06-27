@@ -28,6 +28,7 @@ const removeStore = (name) => {
 
 const localStorage = { setStore, getStore, removeStore }
 
+// 高德定位
 const getPosition = async() => {
   /* eslint-disable no-undef */
   const mapObj = new AMap.Map('iCenter')

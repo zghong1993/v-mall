@@ -2,12 +2,13 @@
   "presets": [
     ["es2015", {
       "modules": false
-    }]
+    }], "stage-2"
   ],
-  "plugins": [["component", [
-    {
-      "libraryName": "mint-ui",
-      "style": true
+  "plugins": [
+    ["component", [
+      {
+        "libraryName": "mint-ui",
+        "style": true
     }
-  ]]]
+  ]], "transform-es2015-shorthand-properties", "transform-runtime"]
 }
