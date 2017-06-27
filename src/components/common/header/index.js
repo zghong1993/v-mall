@@ -1,4 +1,5 @@
 import { getPosition } from '@/config/util'
+import { TOGGLE_SEARCH } from '@/store/mutation-types'
 
 export default {
   name: 'header',
@@ -17,7 +18,7 @@ export default {
   },
   methods: {
     showSearch() {
-      this.$store.commit('TOGLE_SEARCH', true)
+      this.$store.commit(TOGGLE_SEARCH, true)
     },
   },
 }

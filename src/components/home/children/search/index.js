@@ -1,3 +1,5 @@
+import { TOGGLE_SEARCH } from '@/store/mutation-types'
+
 export default {
   name: 'Search',
   data() {
@@ -11,7 +13,7 @@ export default {
   },
   methods: {
     hideSearch() {
-      this.$store.commit('TOGLE_SEARCH', false)
+      this.$store.commit(TOGGLE_SEARCH, false)
     },
   },
 }
