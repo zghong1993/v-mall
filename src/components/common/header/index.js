@@ -16,6 +16,8 @@ export default {
     })
   },
   methods: {
-    showSearch() {},
+    showSearch() {
+      this.$emit('handleShowSearch')
+    },
   },
 }

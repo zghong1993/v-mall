@@ -1,6 +1,6 @@
 <template>
   <div class='home'>
-    <AppHeader :colorIsActive='colorIsActive' />
+    <AppHeader :colorIsActive='colorIsActive' v-on:handleShowSearch='handleShowSearch' />
     <div class='scroll-wrap' @scroll='handleScroll'>
       <div class='swiper'>
         <mt-swipe :auto="4000" :show-indicators="false">
@@ -19,7 +19,7 @@
       </div>
     </div>
     <AppFooter/>
-    <Search/>
+    <Search :showSearch='showSearch' v-on:handleHideSearch='handleHideSearch' />
   </div>
 </template>
 <script src='./index.js'>

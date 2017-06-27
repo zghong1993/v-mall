@@ -3,9 +3,10 @@ export default {
   data() {
     return {}
   },
+  props: ['showSearch'],
   methods: {
     hideSearch() {
-      console.log('d')
+      this.$emit('handleHideSearch')
     },
   },
 }
