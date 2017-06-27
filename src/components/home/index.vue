@@ -19,6 +19,7 @@
       </div>
     </div>
     <AppFooter/>
+    <Search/>
   </div>
 </template>
 <script src='./index.js'>

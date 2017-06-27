@@ -15,5 +15,7 @@ export default {
       }
     })
   },
-  methods: {},
+  methods: {
+    showSearch() {},
+  },
 }

@@ -1,102 +1,124 @@
-  html,
-  body {
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-  }
+html,
+body {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333;
+}
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-  h1 {
-    font-size: 0.2rem;
-  }
+input {
+  border: none;
+}
 
-  h3 {
-    font-size: 0.16rem;
-  }
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+p {
+  margin: .1rem;
+}
 
-  p {
-    margin: .1rem;
-  }
-  /**
- * 单行文本溢出 省略号
- */
 
-  .txt-ellipsis {
-    width: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; //不换行
-  }
-  /**
- * 多行文本溢出 省略号
- */
+/**
+* 单行文本溢出 省略号
+*/
 
-  .txts-ellipsis {
-    width: 100px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.txt-ellipsis {
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; //不换行
+}
 
-  #app {
-    height: 100%;
-    overflow: hidden;
-    font-size: .28rem;
-  }
 
-  .iconfont {
-    font-size: .4rem;
-    &:before {
-      vertical-align: middle;
-    }
-  }
+/**
+* 多行文本溢出 省略号
+*/
 
-  .scroll-wrap {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-scroll-chaining: chained;
-  }
+.txts-ellipsis {
+  width: 100px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-  .pull-left {
-    float: left;
-  }
+#app {
+  height: 100%;
+  overflow: hidden;
+}
 
-  .pull-right {
-    float: right;
+.iconfont {
+  font-size: .4rem;
+  &:before {
+    vertical-align: middle;
   }
+}
 
-  .clear:after {
-    clear: both;
-    content: '.';
-    display: block;
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
+.scroll-wrap {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-chaining: chained;
+}
 
-  .text-center {
-    text-align: center;
-  }
+.pull-left {
+  float: left;
+}
 
-  .text-left {
-    text-align: left;
-  }
+.pull-right {
+  float: right;
+}
 
-  .text-right {
-    text-align: right;
-  }
+.clear:after {
+  clear: both;
+  content: '.';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+input {
+  padding-left: 10px;
+}
+
+
+/**
+* reset font-size
+**/
+
+#app,
+input {
+  font-size: .28rem;
+}
+
+h1 {
+  font-size: 0.2rem;
+}
+
+h3 {
+  font-size: 0.16rem;
+}
