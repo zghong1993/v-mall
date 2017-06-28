@@ -17,6 +17,7 @@
           <p>{{item.shopName}}</p>
         </figure>
       </div>
+      <router-link to="/item">Go to Foo</router-link>
     </div>
     <AppFooter/>
     <Search/>

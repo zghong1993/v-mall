@@ -43,5 +43,7 @@ module.exports = {
     'consistent-return': 0,
     'arrow-parens': 0,
     'space-before-function-paren': 0,
+    'max-len': 0,
+
   }
 }

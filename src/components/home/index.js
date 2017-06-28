@@ -25,6 +25,7 @@ export default {
   },
   created() {
     homeServ.getHomeList().then(d => this.homeList = d)
+    this.$store.dispatch('haha').then(() => console.log('a'), () => console.log('rrrr'))
   },
   methods: {
     // toggle header bakground
