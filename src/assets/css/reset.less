@@ -1,10 +1,11 @@
+@import 'variables';
 html,
 body {
   font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  color: #333;
+  color: @carbonblack;
 }
 
 *,
@@ -79,6 +80,22 @@ p {
   float: right;
 }
 
+input {
+  padding-left: 10px;
+}
+
+h1 {
+  font-size: 0.2rem;
+}
+
+h3 {
+  font-size: 0.16rem;
+}
+
+input {
+  font-size: .28rem !important;
+}
+
 .clear:after {
   clear: both;
   content: '.';
@@ -100,24 +117,33 @@ p {
   text-align: right;
 }
 
-input {
-  padding-left: 10px;
-}
-
 
 /**
 * reset font-size
 **/
 
 #app,
-input {
+header,
+.mintui,
+.mint-cell-wrapper,
+.mint-header {
   font-size: .28rem;
 }
 
-h1 {
-  font-size: 0.2rem;
+.mint-button {
+  height: .8rem;
+  font-size: .36rem;
 }
 
-h3 {
-  font-size: 0.16rem;
+.mint-header {
+  height: .8rem;
+  background: @transparent;
+  color: @gray;
+  border-bottom: 1px solid @darkgray;
+}
+
+.mint-field-state {
+  .mintui-field-error {
+    font-size: .4rem;
+  }
 }

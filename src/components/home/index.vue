@@ -10,7 +10,7 @@
         </mt-swipe>
       </div>
       <div class='home-list'>
-        <figure class='item' v-for='item in homeList' :key='item.id'>
+        <figure class='item' v-for='(item,index) in homeList' :key='item.id' :class='{last: (index+1) % 3 === 0}'>
           <img :src="item.mainImage">
           <p>{{item.name}}</p>
           <p class='clear'><span class='price'>{{item.lowPrice | formatPrice | currency}}</span><span class='iconfont icon-gouwuche pull-right'></span></p>

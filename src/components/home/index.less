@@ -1,3 +1,4 @@
+@import '../../assets/css/variables';
 .home {
   height: 100%;
   display: flex;
@@ -18,7 +19,11 @@
     .item {
       width: 33.33%;
       padding: .2rem;
-      border: 1px solid red;
+      border-right: 1px solid @darkgray;
+      border-bottom: 1px solid @darkgray;
+      &.last {
+        border-right: none;
+      }
       img {
         width: 100%;
       }
