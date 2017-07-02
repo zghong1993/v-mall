@@ -1,6 +1,6 @@
 <template>
   <div class='user-center'>
-    center
+    <div class='scroll-wrap'></div>
     <AppFooter/>
   </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
   <div class='cart'>
+    <div class='scroll-wrap'></div>
     <AppFooter/>
   </div>
 </template>
