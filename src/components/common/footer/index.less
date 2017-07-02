@@ -1,18 +1,23 @@
+@import '../../../assets/css/variables';
 footer {
   width: 100%;
   font-size: .3rem;
-  background: #fff;
+  background: @white;
   box-shadow: 0 0 10px 0 rgba(155, 143, 143, 0.6);
   ul {
     height: 1rem;
     display: flex;
     li {
+      color: @carbonblack;
       width: 25%;
       height: 100%;
       text-align: center;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
+      &.router-link-active {
+        color: @red;
+      }
     }
   }
 }
