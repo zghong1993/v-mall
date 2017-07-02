@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+
 Vue.use(Router)
 
 const Home = resolve => require(['@/components/home/index.vue'], resolve)
@@ -15,6 +16,12 @@ const UserCenter = resolve => require(['@/components/user/user_center/index.vue'
 // trade
 const TradeIndex = resolve => require(['@/components/trade/index/index.vue'], resolve)
 const Cart = resolve => require(['@/components/trade/cart/index.vue'], resolve)
+
+
+// call fun
+const checkLogin = (to, form, next) => {
+  next()
+}
 
 
 export default new Router({
@@ -43,10 +50,12 @@ export default new Router({
     {
       path: '/user',
       component: UserIndex,
+      beforeEnter: checkLogin,
       children: [
         {
           path: '',
           component: UserCenter,
+          meta: { requiresAuth: true },
         },
       ],
     },
