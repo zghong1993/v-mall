@@ -1,4 +1,10 @@
 import { baseUrl } from '@/config/env'
+import cookieObj from 'cookie_js'
+
+const Cookies = cookieObj.cookie
+Cookies.set('msid', '2')
+
+const JSON_TYPE = 'application/json;charset=utf-8'
 
 export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) => {
   type = type.toUpperCase()
@@ -15,7 +21,7 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
   }
   if (window.fetch && method === 'fetch') {
     const requestConfig = {
-      credentials: 'include',
+      credentials: 'include', // 传cookie
       method: type,
       headers: {
         Accept: 'application/json',
@@ -31,8 +37,12 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
     }
     try {
       const response = await fetch(url, requestConfig)
-      const responseJson = await response.json()
-      return responseJson
+      if (response.headers.get('Content-Type') === JSON_TYPE) {
+        const responseJson = await response.json()
+        return responseJson
+      }
+      const responseText = await response.text()
+      return Promise.resolve({ responseText, status: response.status })
     } catch (error) {
       throw new Error(error)
     }

@@ -1,3 +1,5 @@
+import { itemServ } from '@/service'
+
 export default {
   name: 'Item',
   components: {},
@@ -14,7 +16,15 @@ export default {
         },
         bottomTip: '向上拖动查看商品详情',
       },
+      swiperImgList: [],
+      itemDetail: '',
     }
+  },
+  created() {
+    itemServ.getItemDetail({ itemId: this.$route.params.itemId }).then(e => {
+      this.swiperImgList = e.itemDetail.images
+      this.itemDetail = e.itemDetail.detail
+    })
   },
   methods: {
     handleTouchStart(screen, e) {
@@ -25,9 +35,7 @@ export default {
       }
     },
     handleTouchMove(screen, e) {
-      if (screen === 1) {
-        console.log(e)
-      }
+      if (screen === 1) {}
     },
     handleTouchEnd(screen, e) {
       if (screen === 1) {

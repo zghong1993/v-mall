@@ -11,7 +11,7 @@ export default {
   },
   methods: {
     handleLogin() {
-      loginServ.login().then(() => this.$router.push({ path: '/' }))
+      loginServ.login({ username: this.username, password: this.password }).then(() => this.$router.push({ path: '/' }))
     },
   },
 }

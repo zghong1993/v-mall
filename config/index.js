@@ -33,7 +33,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'https://food-m.wens.com.cn',
+        target: 'https://m.parana.terminus.io',
         changeOrigin: true,
         pathRewrite: {}
       }

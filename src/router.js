@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import { loginServ } from './service'
 
 
 Vue.use(Router)
@@ -19,8 +20,13 @@ const Cart = resolve => require(['@/components/trade/cart/index.vue'], resolve)
 
 
 // call fun
-const checkLogin = (to, form, next) => {
-  next()
+const checkLogin = (to, from, next) => {
+  loginServ.checkLogin().then((e) => {
+    if (e.status === 404) {
+      return next('/login')
+    }
+    return next()
+  })
 }
 
 
@@ -40,7 +46,7 @@ export default new Router({
       component: Category,
     },
     {
-      path: '/item',
+      path: '/item/:itemId',
       component: Item,
     },
     {
