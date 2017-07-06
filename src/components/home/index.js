@@ -1,7 +1,7 @@
-import AppHeader from '@/components/common/header/index.vue'
-import AppFooter from '@/components/common/footer/index.vue'
+import AppFooter from '@/components/common/footer/index'
 import { homeServ } from '@/service'
 import { formatPrice, currency } from '@/config/filter'
+import AppHeader from './children/header/index.vue'
 
 import Search from './children/search/index.vue'
 
