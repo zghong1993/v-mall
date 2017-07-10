@@ -14,6 +14,11 @@ const Login = resolve => require(['@/components/login/index.vue'], resolve)
 const UserIndex = resolve => require(['@/components/user/index/index.vue'], resolve)
 const UserCenter = resolve => require(['@/components/user/user_center/index.vue'], resolve)
 
+// item
+
+const Search = resolve => require(['@/components/search/index.vue'], resolve)
+
+
 // trade
 const TradeIndex = resolve => require(['@/components/trade/index/index.vue'], resolve)
 const Cart = resolve => require(['@/components/trade/cart/index.vue'], resolve)
@@ -40,6 +45,10 @@ export default new Router({
     {
       path: '/index',
       component: Home,
+    },
+    {
+      path: '/search',
+      component: Search,
     },
     {
       path: '/category',

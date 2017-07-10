@@ -14,7 +14,11 @@ const setStore = (name, content) => {
  */
 const getStore = (name) => {
   if (!name) return
-  return window.localStorage.getItem(name)
+  try {
+    return JSON.parse(window.localStorage.getItem(name))
+  } catch (error) {
+    return window.localStorage.getItem(name)
+  }
 }
 
 /**

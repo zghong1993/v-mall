@@ -4,12 +4,12 @@
       <div class='scroll-wrap' ref='screen1' @touchstart='handleTouchStart(1,$event)' @touchmove='handleTouchMove(1,$event)' @touchend='handleTouchEnd(1,$event)'>
         <div class='item-info' ref='screen1Con'>
           <mt-header title="商品详情">
-            <router-link to="/" slot="left">
+            <a @click="$router.go(-1)" slot="left">
               <mt-button icon="back">返回</mt-button>
-            </router-link>
+            </a>
           </mt-header>
           <div class='swiper'>
-            <mt-swipe :auto="4000" :show-indicators="false">
+            <mt-swipe :auto="0" :show-indicators="false">
               <mt-swipe-item v-for='(item,index) in swiperImgList' :key='index'><img :src="item.url"></mt-swipe-item>
             </mt-swipe>
           </div>

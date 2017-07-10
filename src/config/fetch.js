@@ -1,8 +1,5 @@
 import { baseUrl } from '@/config/env'
-import cookieObj from 'cookie_js'
 
-const Cookies = cookieObj.cookie
-Cookies.set('msid', '2')
 
 const JSON_TYPE = 'application/json;charset=utf-8'
 
