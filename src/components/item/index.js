@@ -18,9 +18,11 @@ export default {
       },
       swiperImgList: [],
       itemDetail: '',
+      screenWidth: '',
     }
   },
   created() {
+    this.screenWidth = `${screen.width * 2}px`
     itemServ.getItemDetail({ itemId: this.$route.params.itemId }).then(e => {
       this.swiperImgList = e.itemDetail.images
       this.itemDetail = e.itemDetail.detail

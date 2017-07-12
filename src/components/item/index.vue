@@ -8,7 +8,7 @@
               <mt-button icon="back">返回</mt-button>
             </a>
           </mt-header>
-          <div class='swiper'>
+          <div class='swiper' :style="{height:screenWidth}">
             <mt-swipe :auto="0" :show-indicators="false">
               <mt-swipe-item v-for='(item,index) in swiperImgList' :key='index'><img :src="item.url"></mt-swipe-item>
             </mt-swipe>

@@ -1,7 +1,7 @@
 <template>
   <div class='search' :class='{active:searchDisplay}'>
     <p>
-      <input type="text" placeholder='搜索商品名称' @keyup.enter='handleSearch'>
+      <input type="search" placeholder='搜索商品名称' @keyup.enter='handleSearch'>
       <span class='text-center' @click='hideSearch'>取消</span>
     </p>
     <div class='search-history' v-if='searchHistory'>

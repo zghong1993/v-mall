@@ -4,7 +4,7 @@ const proxy = require('http-proxy-middleware')
 
 // 静态服务器
 gulp.task('browser-sync', () => {
-  const middleware = proxy(['/api'], { target: 'https://food-m.wens.com.cn', changeOrigin: true })
+  const middleware = proxy(['/api'], { target: 'https://m.parana.terminus.io', changeOrigin: true })
   browserSync.init({
     server: {
       baseDir: './dist',
