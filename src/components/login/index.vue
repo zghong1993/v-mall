@@ -8,7 +8,7 @@
     <form>
       <div class='input-area'>
         <mt-field label="用户名" placeholder="请输入用户名" v-model="username" id='username'></mt-field>
-        <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password" id='password'></mt-field>
+        <mt-field label="密码" placeholder="请输入密码" type="text" @focus="aa" v-model="password" id='password'></mt-field>
       </div>
       <mt-button type="primary" size="large" class='login-btn' @click.prevent='handleLogin'>登录</mt-button>
     </form>

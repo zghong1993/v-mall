@@ -13,5 +13,8 @@ export default {
     handleLogin() {
       loginServ.login({ username: this.username, password: this.password }).then(() => this.$router.push({ path: '/' }))
     },
+    aa() {
+      console.log('d')
+    },
   },
 }

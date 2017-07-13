@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "cookie_js": "^1.2.2",
+    "lodash": "^4.17.4",
     "mint-ui": "^2.2.7",
     "normalize.css": "^7.0.0",
     "vue": "^2.3.3",
