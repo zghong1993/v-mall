@@ -5,23 +5,23 @@ import { loginServ } from './service'
 
 Vue.use(Router)
 
-const Home = resolve => require(['@/components/home/index.vue'], resolve)
-const Category = resolve => require(['@/components/category/index.vue'], resolve)
-const Item = resolve => require(['@/components/item/index.vue'], resolve)
-const Login = resolve => require(['@/components/login/index.vue'], resolve)
+const Home = resolve => require(['@/pages/home/index.vue'], resolve)
+const Category = resolve => require(['@/pages/category/index.vue'], resolve)
+const Item = resolve => require(['@/pages/item/index.vue'], resolve)
+const Login = resolve => require(['@/pages/login/index.vue'], resolve)
 
 // user
-const UserIndex = resolve => require(['@/components/user/index/index.vue'], resolve)
-const UserCenter = resolve => require(['@/components/user/user_center/index.vue'], resolve)
+const UserIndex = resolve => require(['@/pages/user/index/index.vue'], resolve)
+const UserCenter = resolve => require(['@/pages/user/user_center/index.vue'], resolve)
 
 // item
 
-const Search = resolve => require(['@/components/search/index.vue'], resolve)
+const Search = resolve => require(['@/pages/search/index.vue'], resolve)
 
 
 // trade
-const TradeIndex = resolve => require(['@/components/trade/index/index.vue'], resolve)
-const Cart = resolve => require(['@/components/trade/cart/index.vue'], resolve)
+const TradeIndex = resolve => require(['@/pages/trade/index/index.vue'], resolve)
+const Cart = resolve => require(['@/pages/trade/cart/index.vue'], resolve)
 
 
 // call fun

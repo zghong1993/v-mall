@@ -1,4 +1,4 @@
-import AppFooter from '@/components/common/footer/index.vue'
+import AppFooter from '@/pages/common/footer/index'
 
 export default {
   name: 'Cart',

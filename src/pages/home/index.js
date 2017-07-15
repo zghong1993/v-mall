@@ -1,4 +1,4 @@
-import AppFooter from '@/components/common/footer/index'
+import AppFooter from '@/pages/common/footer/index'
 import { homeServ } from '@/service'
 import { formatPrice, currency } from '@/config/filter'
 import AppHeader from './children/header/index.vue'
@@ -21,9 +21,12 @@ export default {
     return {
       colorIsActive: false,
       homeList: '',
+      bannerHeight: '',
     }
   },
   created() {
+    const bannerImageRadio = 720 / 322
+    this.bannerHeight = `${(screen.width * 2) / bannerImageRadio}px`
     homeServ.getHomeList().then(d => this.homeList = d)
   },
   methods: {
