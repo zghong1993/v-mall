@@ -11,10 +11,13 @@ export default {
   },
   methods: {
     handleLogin() {
-      loginServ.login({ username: this.username, password: this.password }).then(() => this.$router.push({ path: '/' }))
-    },
-    aa() {
-      console.log('d')
+      this.$validator.validateAll().then(result => {
+        if (result) {
+          return loginServ.login({ username: this.username, password: this.password }).then(
+            () => this.$router.push({ path: '/' }),
+          )
+        }
+      })
     },
   },
 }

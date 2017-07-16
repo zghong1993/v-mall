@@ -26,11 +26,10 @@ const Cart = resolve => require(['@/pages/trade/cart/index.vue'], resolve)
 
 // call fun
 const checkLogin = (to, from, next) => {
-  loginServ.checkLogin().then((e) => {
-    if (e.status === 404) {
-      return next('/login')
-    }
-    return next()
+  loginServ.checkLogin().then(() => {
+    next()
+  }, () => {
+    next('/login')
   })
 }
 

@@ -8,6 +8,24 @@
     }
     .input-area {
       margin-bottom: .8rem;
+      .input-field {
+        width: 100%;
+        height: 1rem;
+        border-bottom: 2px solid #ddd;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        align-content: center;
+        label {
+          flex: 0 0 20%;
+        }
+        input {
+          flex: 0 0 70%;
+        }
+        .field-status {
+          flex: 0 0 10%;
+        }
+      }
     }
     .login-btn {
       background: @lightred;

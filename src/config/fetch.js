@@ -1,8 +1,5 @@
 import { baseUrl } from '@/config/env'
 
-
-const JSON_TYPE = 'application/json;charset=utf-8'
-
 export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) => {
   type = type.toUpperCase()
   url = baseUrl + url
@@ -21,7 +18,6 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
       credentials: 'include', // 传cookie
       method: type,
       headers: {
-        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
       mode: 'cors',
@@ -34,12 +30,17 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
     }
     try {
       const response = await fetch(url, requestConfig)
-      if (response.headers.get('Content-Type') === JSON_TYPE) {
-        const responseJson = await response.json()
-        return responseJson
+      const contentType = response.headers.get('content-type')
+      let responseData = ''
+      if (contentType && contentType.indexOf('application/json') !== -1) {
+        responseData = await response.json()
+      } else {
+        responseData = await response.text()
       }
-      const responseText = await response.text()
-      return Promise.resolve({ responseText, status: response.status })
+      if ((response.status >= 200 && response.status <= 300) || response.status === 304) {
+        return responseData
+      }
+      return Promise.reject(responseData)
     } catch (error) {
       throw new Error(error)
     }
