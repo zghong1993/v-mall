@@ -25,7 +25,9 @@ export default {
       swiperImgList: [],
       itemDetail: '',
       screenWidth: '',
-      item: '',
+      item: {
+        extra: '',
+      },
     }
   },
   created() {

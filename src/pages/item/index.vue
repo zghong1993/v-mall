@@ -35,7 +35,7 @@
           </a>
         </mt-header>
         <p class='text-center drag2-tip' v-if='touch.headerTip'>{{touch.headerTip}}</p>
-        <div class='item-detail' ref='screen2Con' v-html="itemDetail">
+        <div class='item-detail-content' ref='screen2Con' v-html="itemDetail">
         </div>
       </div>
     </div>
@@ -57,5 +57,13 @@
 </script>
 <style lang='less' scoped>
 @import './index.less';
+
+</style>
+<style lang='less'>
+.item-detail-content {
+  img {
+    width: 100%;
+  }
+}
 
 </style>
