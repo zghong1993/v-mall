@@ -1,7 +1,10 @@
+@import '../../assets/css/variables';
 .item {
   height: 100%;
   overflow: hidden;
   position: relative;
+  color: @gray;
+  font-size: .32rem;
   .scroll-con {
     transition: all .2s ease;
     height: 200%;
@@ -13,14 +16,88 @@
   }
   .scroll-wrap {
     height: 50%;
+    padding-bottom: 1.2rem;
     .swiper {
       img {
         height: 100%;
         width: 100%;
       }
     }
+    .item-info {
+      margin-bottom: .2rem;
+      background: @white;
+      padding: .2rem;
+      p {
+        margin-bottom: .1rem;
+      }
+      .price {
+        font-size: .44rem;
+        color: @color-primary;
+      }
+      .old-price {
+        text-decoration: line-through;
+      }
+      .shop-info {
+        margin-top: .2rem;
+        color: @darkgray;
+        display: flex;
+        align-items: center;
+        span {
+          flex: 0 0 50%;
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .item-navline {
+      height: 1rem;
+      padding: 0 .2rem;
+      line-height: 1rem;
+      margin-bottom: .2rem;
+      background: @white;
+      display: flex;
+      .title,
+      .right-icon {
+        flex: 0 0 25%;
+      }
+      .con {
+        flex: 0 0 50%;
+      }
+    }
   }
-  p {
-    margin-top: 1500px;
+  .drag2-tip {
+    margin: .2rem 0;
+  }
+  .bottom-opetate {
+    font-size: .38rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 1rem;
+    div {
+      flex: 0 0 33.33%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: .28rem;
+      border-top: 1px solid @gainsboro;
+      color: @darkgray;
+      background: @white;
+    }
+    button {
+      margin: 0;
+      padding: 0;
+      flex: 0 0 33.33%;
+      color: @white;
+      &.buy-now {
+        background: @color-primary;
+      }
+      &.add-cart {
+        background: #fa0;
+      }
+    }
   }
 }

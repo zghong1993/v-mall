@@ -4,7 +4,6 @@
 
  const checkLogin = () => fetch({ url: '/api/user' })
 
-
  export default {
    login,
    checkLogin,

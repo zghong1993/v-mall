@@ -18,6 +18,7 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
       credentials: 'include', // 传cookie
       method: type,
       headers: {
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
       mode: 'cors',
