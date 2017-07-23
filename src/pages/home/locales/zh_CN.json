@@ -1,0 +1,9 @@
+{
+  "messages": {
+    "en": {
+      "message": {
+        "hello": "hello component1"
+      }
+    }
+  }
+}

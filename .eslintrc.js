@@ -14,6 +14,9 @@ module.exports = {
   plugins: [
     'html'
   ],
+  globals: {
+    "_": true,
+  },
   // check if imports actually resolve
   'settings': {
     'import/resolver': {

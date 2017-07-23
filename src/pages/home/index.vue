@@ -10,6 +10,7 @@
         </mt-swipe>
       </div>
       <div class='home-list'>
+        <p>{{ $t("message.hello") }}</p>
         <router-link tag='div' class='item' v-for='(item,index) in homeList' :key='item.id' :class='{last: (index+1) % 3 === 0}' :to="'/item/' + item.id">
           <img :src="item.mainImage" />
           <p class='txt-ellipsis'>{{item.name}}</p>

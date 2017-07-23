@@ -3,10 +3,13 @@ import { homeServ } from '@/service'
 import { formatPrice, currency } from '@/config/filter'
 import AppHeader from './children/header/index.vue'
 
+import zhLocale from './locales/zh_CN.json'
+
 import Search from './children/search/index.vue'
 
 export default {
   name: 'Home',
+  i18n: zhLocale,
   components: {
     AppHeader,
     AppFooter,
