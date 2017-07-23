@@ -1,6 +1,6 @@
 <template>
   <div class='search'>
-    sousuo
+    搜索列表
   </div>
 </template>
 <script src='./index.js'>

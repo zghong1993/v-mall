@@ -5,7 +5,7 @@ export default {
   name: 'Search',
   data() {
     return {
-      searchHistory: localStorage.getStore('searchHistory') || [],
+      searchHistory: localStorage.getStore('searchHistory') || '',
     }
   },
   props: ['showSearch'],

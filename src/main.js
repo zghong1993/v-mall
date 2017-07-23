@@ -21,11 +21,11 @@ Object.defineProperty(Vue.prototype, '_', { value: _, enumerable: false })
 
 
 Vue.use(VeeValidate)
-
 Vue.use(Mint)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,
