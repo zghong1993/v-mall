@@ -16,6 +16,7 @@ module.exports = {
   ],
   globals: {
     "_": true,
+    "AMap": true,
   },
   // check if imports actually resolve
   'settings': {

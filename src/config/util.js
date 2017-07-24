@@ -34,7 +34,6 @@ const localStorage = { setStore, getStore, removeStore }
 
 // 高德定位
 const getPosition = () => {
-  /* eslint-disable no-undef */
   const mapObj = new AMap.Map('iCenter')
   return new Promise((resove) => {
     mapObj.plugin('AMap.Geolocation', () => {
