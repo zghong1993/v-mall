@@ -1,4 +1,4 @@
-import { getPosition } from '@/config/util'
+import { getPosition } from '@/utils/util'
 import { TOGGLE_SEARCH } from '@/store/mutation-types'
 
 export default {

@@ -1,4 +1,4 @@
-import { baseUrl } from '@/config/env'
+import { baseUrl } from '@/config'
 
 export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) => {
   type = type.toUpperCase()

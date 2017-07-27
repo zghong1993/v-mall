@@ -1,6 +1,6 @@
 import AppFooter from '@/pages/common/footer/index'
 import { homeServ } from '@/service'
-import { formatPrice, currency } from '@/config/filter'
+import { formatPrice, currency } from '@/utils/filter'
 import AppHeader from './children/header/index.vue'
 
 import enLocale from './locales/en_US.json'

@@ -1,5 +1,5 @@
 import { TOGGLE_SEARCH } from '@/store/mutation-types'
-import { localStorage } from '@/config/util'
+import { localStorage } from '@/utils/util'
 
 export default {
   name: 'Search',

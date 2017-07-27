@@ -1,5 +1,5 @@
 
-> A Vue.js project by zghong
+> v-mall based vue.js by zghong
 
 
 ## feature

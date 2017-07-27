@@ -1,5 +1,5 @@
 import { itemServ } from '@/service'
-import { formatPrice, currency } from '@/config/filter'
+import { formatPrice, currency } from '@/utils/filter'
 
 export default {
   name: 'Item',
