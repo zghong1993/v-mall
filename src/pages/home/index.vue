@@ -4,9 +4,9 @@
     <div class='scroll-wrap' @scroll='handleScroll'>
       <div class='swiper' :style="{height:bannerHeight}">
         <mt-swipe :auto="4000" :show-indicators="false">
-          <mt-swipe-item><img src="./images/banner1.jpg"></mt-swipe-item>
-          <mt-swipe-item><img src="./images/banner2.jpg"></mt-swipe-item>
-          <mt-swipe-item><img src="./images/banner3.jpg"></mt-swipe-item>
+          <mt-swipe-item><img src="../../assets/images/banner1.jpg"></mt-swipe-item>
+          <mt-swipe-item><img src="../../assets/images/banner2.jpg"></mt-swipe-item>
+          <mt-swipe-item><img src="../../assets/images/banner3.jpg"></mt-swipe-item>
         </mt-swipe>
       </div>
       <div class='home-list'>
