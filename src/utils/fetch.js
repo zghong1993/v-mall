@@ -1,4 +1,5 @@
 import { baseUrl } from '@/config'
+import { Toast } from 'mint-ui'
 
 export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) => {
   type = type.toUpperCase()
@@ -43,6 +44,10 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
       }
       return Promise.reject(responseData)
     } catch (error) {
+      Toast({
+        message: error,
+        duration: 1500,
+      })
       throw new Error(error)
     }
   } else {
