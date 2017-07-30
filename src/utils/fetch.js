@@ -34,6 +34,7 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
       const response = await fetch(url, requestConfig)
       const contentType = response.headers.get('content-type')
       let responseData = ''
+
       if (contentType && contentType.indexOf('application/json') !== -1) {
         responseData = await response.json()
       } else {
@@ -42,6 +43,10 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
       if ((response.status >= 200 && response.status <= 300) || response.status === 304) {
         return responseData
       }
+      Toast({
+        message: responseData,
+        duration: 1500,
+      })
       return Promise.reject(responseData)
     } catch (error) {
       Toast({
