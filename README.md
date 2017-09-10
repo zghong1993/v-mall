@@ -1,5 +1,5 @@
 
-> v-mall based vue.js by zghong
+> v-mall based vue.js by kokiy
 
 
 ## feature
