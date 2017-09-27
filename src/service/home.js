@@ -1,6 +1,6 @@
  import fetch from '@/utils/fetch'
 
- const getHomeList = () => fetch({ url: '/api/items', data: { ids: '5001,5002,5003,5004,5005,5006,5007,5008,5000' } })
+ const getHomeList = () => fetch({ url: '/api/items', data: { ids: '964,952,925,917,853,311,802,481,397,359,358,340' } })
  const hotcity = () => fetch({ url: '/api/config/find', data: { keys: 'carousel', shopId: 12, endpoint: 2 } })
 
 
