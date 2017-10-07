@@ -1,8 +1,9 @@
 {
   "presets": [
-    ["es2015", {
-      "modules": false
-    }], "stage-2"
+    ["env", {
+      "modules": false,
+      "useBuiltIns": "usage"
+    }]
   ],
   "plugins": [
     ["component", [
@@ -10,5 +11,5 @@
         "libraryName": "mint-ui",
         "style": true
     }
-  ]], "transform-es2015-shorthand-properties", "transform-runtime"]
+  ]], "transform-runtime"]
 }
