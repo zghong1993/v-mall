@@ -38,8 +38,7 @@ module.exports = {
       loader: 'vue-loader',
       options: {
         loaders: utils.cssLoaders({
-          sourceMap: isProduction ?
-            config.build.productionSourceMap : config.dev.cssSourceMap,
+          sourceMap: isProduction ? config.build.productionSourceMap : config.dev.cssSourceMap,
           extract: isProduction
         })
       }
