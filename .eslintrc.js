@@ -48,7 +48,8 @@ module.exports = {
     'arrow-parens': 0,
     'space-before-function-paren': 0,
     'max-len': 0,
-    'no-unused-expressions': 0
+    'no-unused-expressions': 0,
+    'import/first': 0,
 
   }
 }

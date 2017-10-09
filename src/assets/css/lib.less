@@ -16,21 +16,6 @@ body {
   box-sizing: inherit;
 }
 
-input {
-  border: none;
-}
-
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-p {
-  margin: 0;
-}
-
 
 /**
 * 单行文本溢出 省略号
@@ -117,56 +102,10 @@ textarea {
 
 #app,
 header,
-.mintui,
-.mint-cell-wrapper,
-.mint-header {
+{
   font-size: .28rem;
-}
-
-.mint-button {
-  height: .8rem;
-  font-size: .36rem;
 }
 
 button {
   font-size: .36rem;
-  border: none;
-}
-
-.mint-header {
-  height: .8rem;
-  background: @transparent;
-  color: @gray;
-  border-bottom: 1px solid @darkgray;
-}
-
-.mint-field-state {
-  .mintui-field-error {
-    font-size: .4rem;
-  }
-}
-
-.mintui-field-error,
-.field-error {
-  color: #f44336;
-}
-
-.mintui-field-success {
-  color: #4caf50;
-}
-
-.mintui-field-warning {
-  color: #ffc107;
-}
-
-.mint-toast {
-  padding: .2rem !important;
-  span {
-    font-size: .28rem !important;
-  }
-} // 商品详情页商品详情 v-html scope 无效解决办法
-#item-detail-content {
-  img {
-    width: 100%;
-  }
 }

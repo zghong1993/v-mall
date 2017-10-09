@@ -9,8 +9,8 @@ import VueI18n from 'vue-i18n'
 
 
 import './assets/css/normalize.css'
-import './assets/css/reset.less'
-
+import './assets/css/reset-mint.less'
+import './assets/css/lib.less'
 
 import App from './app'
 /* eslint import/extensions: "off" */
