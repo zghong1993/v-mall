@@ -2,15 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Mint from 'mint-ui'
-import 'mint-ui/lib/style.css'
 import _ from 'lodash'
 import VeeValidate from 'vee-validate'
 import VueI18n from 'vue-i18n'
 
-
-import './assets/css/normalize.css'
-import './assets/css/reset-mint.less'
-import './assets/css/lib.less'
+require('./assets/css/normalize.less')
+require('./assets/css/mint-ui.less')
+require('./assets/css/mint-ui-reset.less')
+require('./assets/css/lib.less')
 
 import App from './app'
 /* eslint import/extensions: "off" */

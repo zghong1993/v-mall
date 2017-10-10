@@ -11,6 +11,24 @@
  *    IE on Windows Phone and in iOS.
  */
 
+@import 'variables';
+html,
+body {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  color: @carbonblack;
+  -webkit-text-size-adjust: 100%; // forbidden mobile click black
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // forbidden mobile click black
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -295,7 +313,6 @@ input {
 
 input {
   background: transparent;
-  border: none;
 }
 
 
@@ -525,6 +542,10 @@ template {
   display: none;
 }
 
+input {
+  border: none;
+}
+
 ul,
 li {
   margin: 0;
@@ -534,8 +555,4 @@ li {
 
 p {
   margin: 0;
-}
-
-button {
-  border: none;
 }
