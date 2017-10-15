@@ -26,6 +26,18 @@ textarea {
   background: @transparent;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   height: 100%;
   font-size: .28rem;
@@ -39,14 +51,9 @@ textarea {
   }
 }
 
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
+// 商品详情页商品详情 v-html scope 无效解决办法
+#item-detail-content {
+  img {
+    width: 100%;
+  }
 }
