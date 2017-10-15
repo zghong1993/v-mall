@@ -1,10 +1,6 @@
 import { baseUrl } from '@/config'
 import { Toast } from 'mint-ui'
 
-Toast({
-  message: 'sssssssssss',
-  duration: 1500444,
-})
 
 export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) => {
   type = type.toUpperCase()

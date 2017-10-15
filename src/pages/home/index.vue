@@ -12,8 +12,8 @@
       <div class='home-list'>
         <router-link tag='div' class='item' v-for='(item,index) in homeList' :key='item.id' :class='{last: (index+1) % 3 === 0}' :to="'/item/' + item.id">
           <img :src="item.mainImage" />
-          <p class='txt-ellipsis'>{{item.name}}</p>
-          <p class='clear'><span class='price'>{{item.lowPrice | formatPrice | currency}}</span></p>
+          <p class='item-name'>{{item.name}}</p>
+          <p><span class='price'>{{item.lowPrice | formatPrice | currency}}</span></p>
         </router-link>
       </div>
     </div>

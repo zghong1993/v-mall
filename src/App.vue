@@ -13,12 +13,12 @@ export default {
 </script>
 <style lang='less' scoped>
 .slide-left-enter-active {
-  left: 0;
+  left: 100%;
   transition: left .5s;
 }
 
-.slide-left-enter {
-  left: 100%;
+.slide-left-enter-to {
+  left: 0;
 }
 
 </style>

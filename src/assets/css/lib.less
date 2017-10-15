@@ -1,38 +1,11 @@
 @import 'variables';
-
-/**
-* 单行文本溢出 省略号
-*/
-
-.txt-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; //不换行
-}
-
-
-/**
-* 多行文本溢出 省略号
-*/
-
-.txts-ellipsis {
+.txt-ellipsis(@lineNumber: 2) {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: @lineNumber;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-#app {
-  height: 100%;
-  background-color: @color-background;
-}
-
-.iconfont {
-  font-size: .4rem;
-  &:before {
-    vertical-align: middle;
-  }
+  word-break: break-all;
 }
 
 .scroll-wrap {
@@ -49,17 +22,9 @@
   float: right;
 }
 
-input,
-textarea {
-  padding-left: 10px;
-  outline: none;
-  -webkit-appearance: none;
-  font-size: .28rem !important;
-}
-
 .clear:after {
   clear: both;
-  content: '.';
+  content: '';
   display: block;
   width: 0;
   height: 0;
@@ -76,19 +41,4 @@ textarea {
 
 .text-right {
   text-align: right;
-}
-
-
-/**
-* reset font-size
-**/
-
-#app,
-header,
-{
-  font-size: .28rem;
-}
-
-button {
-  font-size: .36rem;
 }

@@ -6,9 +6,10 @@ import _ from 'lodash'
 import VeeValidate from 'vee-validate'
 import VueI18n from 'vue-i18n'
 
-require('./assets/css/normalize.less')
-require('./assets/css/style.less')
+require('normalize.css')
+require('mint-ui/lib/style.css')
 require('./assets/css/mint-ui-reset.less')
+require('./assets/css/reset.less')
 require('./assets/css/lib.less')
 
 import App from './app'
