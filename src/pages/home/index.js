@@ -35,6 +35,7 @@ export default {
   methods: {
     // toggle header bakground
     handleScroll(e) {
+      console.log(e)
       const scrollTop = e.target.scrollTop
       if (scrollTop > 50) {
         this.colorIsActive = true
