@@ -1,5 +1,5 @@
 <template>
-  <div class='home scroll-wrap' @scroll='handleScroll'>
+  <div class='home' @scroll='handleScroll'>
     <AppHeader :colorIsActive='colorIsActive' />
     <div class='swiper' :style="{height:bannerHeight}">
       <mt-swipe :auto="4000" :show-indicators="false">
