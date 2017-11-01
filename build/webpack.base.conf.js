@@ -13,11 +13,9 @@ module.exports = {
     app: './src/main.js'
   },
   output: {
-      // 设置输出文件夹
-    path: config.build.assetsRoot,
+    path: config.build.assetsRoot,// 设置输出文件夹
     filename: '[name].js',
-    // 设置公用文件夹路径
-    publicPath: isProduction ? config.build.assetsPublicPath : config.dev.assetsPublicPath
+    publicPath: isProduction ? config.build.assetsPublicPath : config.dev.assetsPublicPath // 设置公用文件夹路径
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],

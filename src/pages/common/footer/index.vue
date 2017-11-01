@@ -16,7 +16,4 @@
     </ul>
   </footer>
 </template>
-<style lang='less' scoped>
-@import './index.less';
-
-</style>
+<style lang='less' src='./index.less' scoped />
