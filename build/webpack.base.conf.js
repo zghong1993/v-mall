@@ -1,6 +1,6 @@
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
+const config = require('./config')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -13,8 +13,10 @@ module.exports = {
     app: './src/main.js'
   },
   output: {
+      // 设置输出文件夹
     path: config.build.assetsRoot,
     filename: '[name].js',
+    // 设置公用文件夹路径
     publicPath: isProduction ? config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
