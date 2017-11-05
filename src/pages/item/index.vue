@@ -31,11 +31,11 @@
       <div class='scroll-wrap item-detial' ref='screen2' @touchstart='handleTouchStart(2,$event)' @touchmove='handleTouchMove(2,$event)' @touchend='handleTouchEnd(2,$event)'>
         <mt-header title="商品详情">
           <a @click="$router.go(-1)" slot="left">
-            <mt-button icon="back">返回</mt-button>
+            <!-- <mt-button icon="back">返回</mt-button> -->
           </a>
         </mt-header>
         <p class='text-center drag2-tip' v-if='touch.headerTip'>{{touch.headerTip}}</p>
-        <div id='item-detail-content' ref='screen2Con' v-html="itemDetail">
+        <div class='item-detail-content' ref='screen2Con' v-html="itemDetail">
         </div>
       </div>
     </div>
