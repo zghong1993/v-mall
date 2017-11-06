@@ -60,7 +60,7 @@
     "semver": "^5.4.1",
     "shelljs": "^0.7.6",
     "url-loader": "^0.5.8",
-    "vue-loader": "^12.2.2",
+    "vue-loader": "^13.4.0",
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.7.1",
