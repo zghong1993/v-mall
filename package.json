@@ -5,8 +5,8 @@
   "author": "zhaoguohong <zhaoguohong@terminus.io>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
+    "dev": "webpack-dashboard -- node build/dev-server.js",
+    "start": "webpack-dashboard -- node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
@@ -65,6 +65,7 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.7.1",
     "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dashboard": "^1.0.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.19.1",
     "webpack-merge": "^4.1.0"
