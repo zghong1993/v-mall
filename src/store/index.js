@@ -6,9 +6,7 @@ import actions from './actions'
 
 Vue.use(Vuex)
 
-const state = {
-  showSearch: false,
-}
+const state = { showSearch: false }
 
 
 export default new Vuex.Store({

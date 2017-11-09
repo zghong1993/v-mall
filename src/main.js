@@ -27,9 +27,7 @@ Vue.use(Mint)
 Vue.config.productionTip = false
 
 
-const i18n = new VueI18n({
-  locale: 'en', // set locale
-})
+const i18n = new VueI18n({ locale: 'en' })
 
 /* eslint-disable no-new */
 
@@ -39,7 +37,5 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: {
-    App,
-  },
+  components: { App },
 })

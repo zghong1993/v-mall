@@ -1,7 +1,6 @@
 import { baseUrl } from '@/config'
 import { Toast } from 'mint-ui'
 
-
 export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) => {
   type = type.toUpperCase()
   url = baseUrl + url
@@ -27,9 +26,7 @@ export default async({ url = '', data = {}, type = 'GET', method = 'fetch' }) =>
       cache: 'force-cache',
     }
     if (type === 'POST') {
-      Object.defineProperty(requestConfig, 'body', {
-        value: JSON.stringify(data),
-      })
+      Object.defineProperty(requestConfig, 'body', { value: JSON.stringify(data) })
     }
     try {
       const response = await fetch(url, requestConfig)

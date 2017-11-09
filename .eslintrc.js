@@ -50,6 +50,7 @@ module.exports = {
     'max-len': 0,
     'no-unused-expressions': 0,
     'import/first': 0,
-
+    'prefer-promise-reject-errors': 0,
+    "object-curly-newline": 0,
   }
 }
