@@ -52,5 +52,6 @@ module.exports = {
     'import/first': 0,
     'prefer-promise-reject-errors': 0,
     "object-curly-newline": 0,
+    "no-restricted-globals": ["error", "event", "fdescribe"]
   }
 }

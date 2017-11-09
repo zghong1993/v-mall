@@ -1,6 +1,6 @@
 <template>
-  <div class='home' @scroll='handleScroll'>
-    <AppHeader :colorIsActive='colorIsActive' />
+  <div class='home'>
+    <AppHeader />
     <div class='swiper' :style="{height:bannerHeight}">
       <mt-swipe :auto="4000" :show-indicators="false">
         <mt-swipe-item><img src="../../assets/images/banner1.jpg"></mt-swipe-item>

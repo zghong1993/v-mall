@@ -22,7 +22,6 @@ export default {
   },
   data() {
     return {
-      colorIsActive: false,
       homeList: '',
       bannerHeight: '',
     }
@@ -33,15 +32,10 @@ export default {
     homeServ.getHomeList().then(d => this.homeList = d)
   },
   methods: {
-    // toggle header bakground
-    handleScroll(e) {
-      console.log(e)
-      const scrollTop = e.target.scrollTop
-      if (scrollTop > 50) {
-        this.colorIsActive = true
-      } else {
-        this.colorIsActive = false
-      }
+    handleRecommendListScroll(e) {
+      const offsetY = e.nativeEvent.contentOffset.y
+      const headerOpacity = Math.min(1.0, offsetY / 30) < 0 ? 0 : Math.min(1.0, offsetY / 30)
+      this.setState({ headerBackgroundColor: `rgba(255,255,255,${headerOpacity})` })
     },
   },
 }
