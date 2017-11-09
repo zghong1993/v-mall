@@ -6,8 +6,11 @@ export default {
   props: [],
   data() {
     return {
-      cityName: '',
-      colorIsActive: false,
+      cityName: '定位中',
+      locationWrap: {
+        background: 'rgba(255, 255, 255,0)',
+        color: '#000',
+      },
     }
   },
   created() {
@@ -18,7 +21,7 @@ export default {
     })
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll.bind(this))
   },
   methods: {
     showSearch() {
@@ -27,11 +30,10 @@ export default {
     // toggle header bakground
     handleScroll() {
       const { scrollY } = window
-      // const headerOpacity = Math.min(1.0, scrollY / 30) < 0 ? 0 : Math.min(1.0, scrollY / 30)
-      if (scrollY > 50) {
-        this.colorIsActive = true
-      } else {
-        this.colorIsActive = false
+      const locationOpacity = Math.min(1.0, scrollY / 100) < 0 ? 0 : Math.min(1.0, scrollY / 100)
+      this.locationWrap = {
+        background: `rgba(255,255,255,${locationOpacity})`,
+        color: '#000',
       }
     },
   },

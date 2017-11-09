@@ -1,5 +1,5 @@
 <template>
-  <mt-header fixed v-bind:class="{ black: !colorIsActive ,white: colorIsActive}">
+  <mt-header fixed :style="locationWrap">
     <span slot="left">{{cityName}}</span>
     <span slot="right" @click='showSearch'><i class='iconfont icon-search'></i></span>
   </mt-header>
