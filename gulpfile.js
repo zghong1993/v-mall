@@ -5,7 +5,7 @@ const proxy = require('http-proxy-middleware')
 // 静态服务器
 gulp.task('browser-sync', () => {
   const middleware = proxy(['/api'], {
-    target: 'https://m.parana.terminus.io',
+    target: 'https://m.idf66.com',
     changeOrigin: true,
     cookieDomainRewrite: 'localhost',
   })
