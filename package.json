@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dashboard -- node build/dev-server.js",
-    "start": "webpack-dashboard -- node build/dev-server.js",
+    "start1": "webpack-dashboard -- node build/dev-server.js",
+    "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },

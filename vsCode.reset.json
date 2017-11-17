@@ -1,6 +1,7 @@
-// 将设置放入此文件中以覆盖默认设置
 {
   "editor.fontSize": 16,
+  "editor.fontWeight": "100",
+  "workbench.fontAliasing": "antialiased",
   "editor.lineHeight": 22,
   "editor.wordWrap": "off",
   "editor.tabSize": 2,
@@ -13,7 +14,7 @@
   "git.confirmSync": false,
   "files.insertFinalNewline": true,
   "window.zoomLevel": 0,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "eslint.autoFixOnSave": true,
   "typescript.check.npmIsInstalled": false,
   "extensions.ignoreRecommendations": true,
@@ -45,7 +46,7 @@
     "**/node_modules/**/*"
   ],
   "sync.gist": "1a94facc45b93e2247278345a41930ab",
-  "sync.lastUpload": "2017-08-25T01:27:22.329Z",
+  "sync.lastUpload": "2017-11-15T01:42:19.482Z",
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.lastDownload": "",
@@ -60,5 +61,7 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "sync.askGistName": false,
-  "workbench.colorTheme": "Atom One Dark"
+  "workbench.colorTheme": "Atom One Dark",
+  "html.suggest.angular1": false,
+  "html.suggest.ionic": false
 }
