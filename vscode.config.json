@@ -1,22 +1,31 @@
+// 将设置放入此文件中以覆盖默认设置
 {
   "editor.fontSize": 16,
   "editor.fontWeight": "100",
-  "workbench.fontAliasing": "antialiased",
   "editor.lineHeight": 22,
   "editor.wordWrap": "off",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "files.trimTrailingWhitespace": true,
   "editor.scrollBeyondLastLine": false,
   "editor.renderLineHighlight": "line",
   "editor.selectionHighlight": true,
+  "editor.minimap.enabled": true,
+  "editor.parameterHints": false,
+  "editor.matchBrackets": true,
+  "editor.cursorStyle": "line-thin",
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "vscode-icons",
   "git.confirmSync": false,
+  "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  "files.autoSave": "onWindowChange",
   "window.zoomLevel": 0,
-  "editor.formatOnSave": false,
-  "eslint.autoFixOnSave": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
   "typescript.check.npmIsInstalled": false,
+  "typescript.autoImportSuggestions.enabled": false,
   "extensions.ignoreRecommendations": true,
   "git.enableSmartCommit": true,
   "beautify.language": {
@@ -45,7 +54,6 @@
     "**/dist/**/*",
     "**/node_modules/**/*"
   ],
-  "sync.gist": "1a94facc45b93e2247278345a41930ab",
   "sync.lastUpload": "2017-11-15T01:42:19.482Z",
   "sync.autoDownload": false,
   "sync.autoUpload": false,
@@ -57,11 +65,14 @@
   "sync.quietSync": false,
   "vetur.validation.template": false,
   "files.associations": {
-    "*.vue": "html"
+    "*.vue": "html",
+    "*.wpy": "vue"
   },
   "workbench.startupEditor": "newUntitledFile",
   "sync.askGistName": false,
   "workbench.colorTheme": "Atom One Dark",
   "html.suggest.angular1": false,
-  "html.suggest.ionic": false
+  "html.suggest.ionic": false,
+  "[html]": {},
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
 }
