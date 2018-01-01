@@ -3,8 +3,8 @@
     <div class='scroll-con' ref='scrollCon'>
       <div class='scroll-wrap' ref='screen1' @touchstart='handleTouchStart(1,$event)' @touchmove='handleTouchMove(1,$event)' @touchend='handleTouchEnd(1,$event)'>
         <div ref='screen1Con'>
-          <mt-header title="商品详情">
-            <a @click="$router.go(-1)" slot="left">
+          <mt-header fixed title="商品详情">
+            <a @click="$router.back()" slot="left">
               <mt-button icon="back">返回</mt-button>
             </a>
           </mt-header>
@@ -29,9 +29,9 @@
         </div>
       </div>
       <div class='scroll-wrap item-detial' ref='screen2' @touchstart='handleTouchStart(2,$event)' @touchmove='handleTouchMove(2,$event)' @touchend='handleTouchEnd(2,$event)'>
-        <mt-header title="商品详情">
-          <a @click="$router.go(-1)" slot="left">
-            <!-- <mt-button icon="back">返回</mt-button> -->
+        <mt-header fixed title="商品详情">
+          <a @click="$router.back()" slot="left">
+            <mt-button icon="back">返回</mt-button>
           </a>
         </mt-header>
         <p class='text-center drag2-tip' v-if='touch.headerTip'>{{touch.headerTip}}</p>

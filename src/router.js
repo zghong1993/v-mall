@@ -40,10 +40,16 @@ export default new Router({
     {
       path: '/',
       component: Home,
+      meta: {
+        keepAlive: true,
+      },
     },
     {
       path: '/index',
       component: Home,
+      meta: {
+        keepAlive: true,
+      },
     },
     {
       path: '/search',
