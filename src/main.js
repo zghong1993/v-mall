@@ -1,7 +1,8 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Mint from 'mint-ui'
+import Mint, { Lazyload } from 'mint-ui'
+
 import _ from 'lodash'
 import VeeValidate from 'vee-validate'
 import VueI18n from 'vue-i18n'
@@ -24,6 +25,10 @@ Object.defineProperty(Vue.prototype, '_', { value: _, enumerable: false })
 Vue.use(VueI18n)
 Vue.use(VeeValidate)
 Vue.use(Mint)
+Vue.use(Lazyload, {
+  preLoad: 1.3,
+  attempt: 1,
+})
 Vue.config.productionTip = false
 
 
