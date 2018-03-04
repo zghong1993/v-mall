@@ -13,9 +13,9 @@ require('./assets/css/mint-ui-reset.less')
 require('./assets/css/reset.less')
 require('./assets/css/lib.less')
 
-import App from './app.vue'
+import App from './app'
 /* eslint import/extensions: "off" */
-import router from './router.js'
+import router from './router'
 import store from './store'
 
 
