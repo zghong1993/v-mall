@@ -2,7 +2,7 @@ import { getPosition } from '@/utils/util'
 import { TOGGLE_SEARCH } from '@/store/mutation-types'
 
 export default {
-  name: 'header',
+  name: 'SearchHeader',
   props: [],
   data() {
     return {

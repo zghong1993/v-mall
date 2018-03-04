@@ -1,11 +1,9 @@
-import AppFooter from '@/pages/common/footer/index'
+import AppFooter from '@/components/common/footer'
 import { homeServ } from '@/service'
 import { formatPrice, currency } from '@/utils/filter'
-import AppHeader from './children/header/index.vue'
-
+import AppHeader from '@/components/common/search-header'
+import Search from '@/components/search-pop'
 import enLocale from './locales/en_US.json'
-
-import Search from './children/search/index.vue'
 
 export default {
   name: 'Home',

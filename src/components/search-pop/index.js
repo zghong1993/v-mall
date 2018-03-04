@@ -9,7 +9,7 @@ export default {
     }
   },
   props: ['showSearch'],
-  created() {},
+  created() { },
   computed: {
     searchDisplay() {
       return this.$store.state.showSearch

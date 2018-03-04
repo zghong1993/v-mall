@@ -18,7 +18,7 @@ module.exports = {
     publicPath: isProduction ? config.build.assetsPublicPath : config.dev.assetsPublicPath, // 设置公用文件夹路径
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.vue', '.js', '.json'],
     alias: { // 创建 import/require 的别名
       vue$: 'vue/dist/vue.esm.js',
       '@': resolve('src'),
