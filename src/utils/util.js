@@ -34,19 +34,24 @@ const localStorage = { setStore, getStore, removeStore }
 
 // 高德定位
 const getPosition = () => {
-  const mapObj = new AMap.Map('iCenter')
-  return new Promise((resove) => {
-    mapObj.plugin('AMap.Geolocation', () => {
-      const geolocation = new AMap.Geolocation({
-        timeout: 10000,
-        noIpLocate: 0,
-        noGeoLocation: 0,
-        extensions: 'all',
+  let AMap
+  const mapObj = AMap && new AMap.Map('iCenter')
+  return new Promise((resove, reject) => {
+    if (mapObj) {
+      mapObj.plugin('AMap.Geolocation', () => {
+        const geolocation = new AMap.Geolocation({
+          timeout: 10000,
+          noIpLocate: 0,
+          noGeoLocation: 0,
+          extensions: 'all',
+        })
+        geolocation.getCurrentPosition((status, result) => {
+          resove({ status, result })
+        })
       })
-      geolocation.getCurrentPosition((status, result) => {
-        resove({ status, result })
-      })
-    })
+    } else {
+      reject('定位失败')
+    }
   })
 }
 

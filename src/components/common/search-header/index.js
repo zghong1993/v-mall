@@ -18,7 +18,7 @@ export default {
       if (e && e.status === 'complete') {
         this.cityName = e.result.addressComponent.city
       }
-    })
+    }, err => console.log(err))
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll.bind(this))
