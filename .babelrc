@@ -1,12 +1,19 @@
 {
   "presets": [
-    ["env", {
-      "modules": false,
-      "useBuiltIns": "usage",
-      "targets": {
-        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
-      }
-    }]
+    "env"
   ],
-  "plugins": ["transform-runtime","transform-object-rest-spread"]
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-decorators-legacy",
+    "transform-async-to-generator",
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
+  ]
 }
