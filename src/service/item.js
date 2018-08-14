@@ -1,6 +1,5 @@
-import fetch from '@/utils/fetch'
-
-const getItemDetail = ({ itemId }) => fetch({ url: `/api/mobile/item/${itemId}` })
+import { GET, POST } from '@/utils/fly'
+const getItemDetail = ({ itemId }) => GET({ url: `/api/mobile/item/${itemId}` })
 
 export default {
   getItemDetail,

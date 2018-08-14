@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "cookie_js": "^1.2.2",
+    "flyio": "^0.6.0",
     "lodash": "^4.17.5",
     "mint-ui": "^2.2.13",
     "normalize.css": "^7.0.0",
@@ -33,6 +34,7 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
     "react-hot-loader": "^4.3.4",
     "style-loader": "^0.22.1",
     "url-loader": "^1.0.1",
