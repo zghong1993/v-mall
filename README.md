@@ -8,6 +8,8 @@
 3. 集成 mint-ui基础组件库
 4. 集成 lodash ,便于前端处理复杂的数据结构
 5. 引入vue-i18n ,增加模板翻译功能
+6. 引入fly.js 作为http 请求库
+7. 升级webpack4 ,删除vue-cli生成的build 文件夹,自己搭建webpack.config.js
 
 
 ## Build Setup
