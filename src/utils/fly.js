@@ -3,24 +3,23 @@ import { BASE_URL } from '@/config'
 import { Toast } from 'mint-ui'
 
 
-
-//添加请求拦截器
+// 添加请求拦截器
 fly.interceptors.request.use((request) => {
-  //给所有请求添加自定义header
-  request.headers["X-from"] = "kokiy";
+  // 给所有请求添加自定义header
+  request.headers['X-from'] = 'kokiy'
   request.baseURL = BASE_URL
   request.withCredentials = true
   request.timeout = 90000
-  //终止请求
-  //var err=new Error("xxx")
-  //err.request=request
-  //return Promise.reject(new Error(""))
+  // 终止请求
+  // var err=new Error("xxx")
+  // err.request=request
+  // return Promise.reject(new Error(""))
 
-  //可以显式返回request, 也可以不返回，没有返回值时拦截器中默认返回request
-  return request;
+  // 可以显式返回request, 也可以不返回，没有返回值时拦截器中默认返回request
+  return request
 })
 
-//添加响应拦截器，响应拦截器会在then/catch处理之前执行
+// 添加响应拦截器，响应拦截器会在then/catch处理之前执行
 fly.interceptors.response.use(
   (res) => {
     if ((res.status >= 200 && res.status <= 300) || res.status === 304) {
@@ -32,13 +31,11 @@ fly.interceptors.response.use(
     const errMessage = ['网络错误', '请求超时']
     Toast({
       message: errMessage[err.status] || err.message,
-      duration: 1500
+      duration: 1500,
     })
     return Promise.reject(err)
-  }
+  },
 )
-
-
 
 
 const GET = async ({ url, param }) => {
@@ -49,7 +46,6 @@ const GET = async ({ url, param }) => {
     console.error(error)
   }
 }
-
 
 
 const POST = async ({ url, param = {} }) => {

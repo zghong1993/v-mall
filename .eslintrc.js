@@ -22,7 +22,7 @@ module.exports = {
   'settings': {
     'import/resolver': {
       'webpack': {
-        'config': 'build/webpack.base.conf.js'
+        'config': 'webpack.config.js'
       }
     }
   },
@@ -31,11 +31,7 @@ module.exports = {
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       'js': 'never',
-      'vue': 'never'
-    }],
-    // allow optionalDependencies
-    'import/no-extraneous-dependencies': ['error', {
-      'optionalDependencies': ['test/unit/index.js']
+      'vue': 'never',
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
@@ -48,8 +44,10 @@ module.exports = {
     'arrow-parens': 0,
     'space-before-function-paren': 0,
     'max-len': 0,
+    'no-console': 0,
     'no-unused-expressions': 0,
     'import/first': 0,
+    'import/prefer-default-export': 0,
     'prefer-promise-reject-errors': 0,
     "object-curly-newline": 0,
     "no-restricted-globals": ["error", "event", "fdescribe"]

@@ -1,4 +1,4 @@
-import { GET, POST } from '@/utils/fly'
+import { POST } from '@/utils/fly'
 
 const login = ({ username, password }) => POST({ url: '/api/user/login', param: { loginBy: username, type: 1, password } })
 

@@ -13,15 +13,15 @@ require('./assets/css/mint-ui-reset.less')
 require('./assets/css/reset.less')
 require('./assets/css/lib.less')
 
+
+/* eslint-disable import/extensions */
 import App from './app'
-/* eslint import/extensions: "off" */
+
 import router from './router'
 import store from './store'
 
-
 // add lodash 插件
 Object.defineProperty(Vue.prototype, '_', { value: _, enumerable: false })
-
 Vue.use(VueI18n)
 Vue.use(VeeValidate)
 Vue.use(Mint)
@@ -30,12 +30,9 @@ Vue.use(Lazyload, {
   attempt: 1,
 })
 Vue.config.productionTip = false
-
-
 const i18n = new VueI18n({ locale: 'en' })
 
 /* eslint-disable no-new */
-
 new Vue({
   el: '#app',
   i18n,
