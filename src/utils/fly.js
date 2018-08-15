@@ -1,12 +1,16 @@
 import fly from 'flyio'
+import { BASE_URL } from '@/config'
+import { Toast } from 'mint-ui'
+
+
 
 //添加请求拦截器
 fly.interceptors.request.use((request) => {
   //给所有请求添加自定义header
-  // request.headers["X-Tag"] = "flyio";
-  request.baseURL = "https://m.idf66.com"
-  //打印出请求体
-  console.log(request.body)
+  request.headers["X-from"] = "kokiy";
+  request.baseURL = BASE_URL
+  request.withCredentials = true
+  request.timeout = 90000
   //终止请求
   //var err=new Error("xxx")
   //err.request=request
@@ -18,59 +22,46 @@ fly.interceptors.request.use((request) => {
 
 //添加响应拦截器，响应拦截器会在then/catch处理之前执行
 fly.interceptors.response.use(
-  (response) => {
-    //只将请求结果的data字段返回
-    return response.data
+  (res) => {
+    if ((res.status >= 200 && res.status <= 300) || res.status === 304) {
+      return res.data
+    }
+    throw new Error(res)
   },
   (err) => {
-    return Promise.resolve("ssss")
+    const errMessage = ['网络错误', '请求超时']
+    Toast({
+      message: errMessage[err.status] || err.message,
+      duration: 1500
+    })
+    return Promise.reject(err)
   }
 )
 
 
-const paramConvert = (url, param = {}) => {
-  let paramStr = ''
-  Object.keys(param).forEach(key => {
-    paramStr += `${key}=${param[key]}&`
-  })
-  if (paramStr !== '') {
-    paramStr = paramStr.substr(0, paramStr.lastIndexOf('&'))
-    url = `${url}?${paramStr}`
-  }
-  return url
-}
-
 
 
 const GET = async ({ url, param }) => {
-  const newUrl = paramConvert(url, param)
   try {
-    const response = await fly.get(newUrl)
+    const response = await fly.get(url, param)
     return Promise.resolve(response)
   } catch (error) {
-    console.log(error)
-    return Promise.reject(error)
+    console.error(error)
   }
 }
 
 
 
-const POST = ({ url, param = {} }) => {
-  fly.post(url, param)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
+const POST = async ({ url, param = {} }) => {
+  try {
+    const response = await fly.post(url, param, {})
+    return Promise.resolve(response)
+  } catch (error) {
+    console.error(error)
+  }
 }
-
-const DELETE = () => {
-}
-
 
 
 export {
-  GET, POST, DELETE
+  GET, POST,
 }

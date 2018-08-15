@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "scripts": {
-    "dev": "webpack-dev-server --hot --mode development --open",
+    "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
   "dependencies": {

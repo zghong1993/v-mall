@@ -1,4 +1,5 @@
 const path = require("path")
+const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -17,7 +18,7 @@ module.exports = (_, argv) => {
   return {
     output: {
       filename: `[name].${isProduction ? '[hash]' : 'bundle'}.js`,//输出文件名，[name]表示入口文件js名
-      path: path.join(__dirname, "dist"),//输出文件路径
+      path: resolve('dist'),//输出文件路径
       publicPath: isProduction ? PUBLIC_PATH : '/'
     },
     resolve: {
@@ -96,8 +97,9 @@ module.exports = (_, argv) => {
       ]
     },
     plugins: [
-      new CleanWebpackPlugin(['dist']), //传入数组,指定要删除的目录
+      isProduction ? new CleanWebpackPlugin(['dist']) : () => { }, //传入数组,指定要删除的目录
       new VueLoaderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
       new HtmlWebPackPlugin({
         template: "./index.html", //以/src目录下index.html文件为模板生成dist/index.html文件
         filename: "./index.html",
@@ -108,18 +110,23 @@ module.exports = (_, argv) => {
       })
     ],
     devServer: {
-      inline: true,//打包后加入一个websocket客户端
-      hot: true,//热加载
+      open: false,
       contentBase: resolve('dist'),//开发服务运行时的文件根目录
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      progress: true,
       host: 'localhost',//主机地址
       port: 9090,//端口号
       historyApiFallback: true,
+      overlay: true,
+      // stats: "errors-only",
       proxy: {
-        '(/api/){1}': {
+        '/api/': {
           target: 'https://m.idf66.com',
           changeOrigin: true,
-          pathRewrite: {},
-          cookieDomainRewrite: 'localhost',
+          secure: false,
+          cookieDomainRewrite: ''
         },
       },
     },

@@ -10,14 +10,12 @@ export default {
     }
   },
   methods: {
-    handleLogin() {
-      this.$validator.validateAll().then(result => {
-        if (result) {
-          return loginServ.login({ username: this.username, password: this.password }).then(
-            () => this.$router.push({ path: '/' }),
-          )
-        }
-      })
+    async handleLogin() {
+      const result = await this.$validator.validateAll()
+      if (result) {
+        const res = await loginServ.login({ username: this.username, password: this.password }) || {}
+        res.redirect && this.$router.push({ path: res.redirect })
+      }
     },
   },
 }
