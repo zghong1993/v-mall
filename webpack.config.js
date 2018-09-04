@@ -60,11 +60,11 @@ module.exports = (_, argv = { mode: 'development' }) => {
         },
         {
           test: /\.less$/,
-          use: ['style-loader', 'css-loader', 'less-loader'], // 编译顺序从右往左
+          use: [isProduction ? MiniCssExtractPlugin.loader : 'vue-style-loader', 'css-loader', 'postcss-loader', 'less-loader'], // 编译顺序从右往左
         },
         {
           test: /\.css$/,
-          use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
         },
         {
           test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -99,15 +99,25 @@ module.exports = (_, argv = { mode: 'development' }) => {
             priority: 10,
             enforce: true,
           },
+          styles: {
+            name: 'styles',
+            test: /\.less$/,
+            chunks: 'all',
+            enforce: true,
+          },
         },
       },
-      minimizer: [
-        new UglifyJsPlugin({ /* your config */ }),
+      minimizer: isProduction ? [
+        new UglifyJsPlugin({
+          cache: true,
+          parallel: true,
+          sourceMap: true,
+        }),
         new OptimizeCSSAssetsPlugin({}),
-      ],
+      ] : [],
     },
     plugins: [
-      isProduction ? new CleanWebpackPlugin(['dist']) : () => { }, // 传入数组,指定要删除的目录
+      new CleanWebpackPlugin(['dist']), // 传入数组,指定要删除的目录
       new VueLoaderPlugin(),
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebPackPlugin({
@@ -127,7 +137,7 @@ module.exports = (_, argv = { mode: 'development' }) => {
       },
       progress: true,
       host: 'localhost', // 主机地址
-      port: 9090, // 端口号
+      port: 9091, // 端口号
       historyApiFallback: true,
       overlay: true,
       // stats: 'errors-only',

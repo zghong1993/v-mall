@@ -1,8 +1,13 @@
 // https://github.com/michael-ciniawsky/postcss-load-config
 
 module.exports = {
+  "sourceMap": true,
   "plugins": {
-    // to edit target browsers: use "browserlist" field in package.json
-    "autoprefixer": {}
+    "autoprefixer": {
+      "browsers": [
+        "last 2 version",
+        "ie > 8",
+      ]
+    }
   }
 }
