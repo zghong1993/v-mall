@@ -4,7 +4,8 @@
   "description": "A Vue.js project",
   "scripts": {
     "dev": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "analyz": "webpack --mode production --analyz true"
   },
   "dependencies": {
     "cookie_js": "^1.2.2",
@@ -52,6 +53,7 @@
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.16.5",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
   }

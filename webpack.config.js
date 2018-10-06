@@ -6,6 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 
 const resolve = dir => path.join(__dirname, dir)
@@ -13,11 +14,11 @@ const resolve = dir => path.join(__dirname, dir)
 const PUBLIC_PATH = 'http://cdn.example.com/assets/[hash]/'
 
 
-module.exports = (_, argv = { mode: 'development' }) => {
+module.exports = (_, argv = { mode: 'development', analyz: false }) => {
   const isProduction = argv.mode === 'production'
   return {
     output: {
-      filename: `[name].${isProduction ? '[hash]' : 'bundle'}.js`, // 输出文件名，[name]表示入口文件js名
+      filename: `[name].${isProduction ? '[hash]' : ''}.js`, // 输出文件名，[name]表示入口文件js名
       path: resolve('dist'), // 输出文件路径
       publicPath: isProduction ? PUBLIC_PATH : '/',
     },
@@ -117,6 +118,7 @@ module.exports = (_, argv = { mode: 'development' }) => {
       ] : [],
     },
     plugins: [
+      argv.analyz ? new BundleAnalyzerPlugin() : () => { },
       new CleanWebpackPlugin(['dist']), // 传入数组,指定要删除的目录
       new VueLoaderPlugin(),
       new webpack.HotModuleReplacementPlugin(),
