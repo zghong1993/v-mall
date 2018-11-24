@@ -8,6 +8,7 @@ module.exports = {
         "last 2 version",
         "ie > 8",
       ]
-    }
+    },
+    "postcss-px2rem": { remUnit: 50, custom: { 75: ['index'] } }
   }
 }

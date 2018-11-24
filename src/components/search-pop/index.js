@@ -10,6 +10,9 @@ export default {
   },
   props: ['showSearch'],
   created() { },
+  updated() {
+    this.searchHistory = localStorage.getStore('searchHistory') || ''
+  },
   computed: {
     searchDisplay() {
       return this.$store.state.showSearch
