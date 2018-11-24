@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
+    "lint": "eslint --ext .js,.vue src",
     "analyz": "webpack --mode production --analyz true"
   },
   "dependencies": {

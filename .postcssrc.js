@@ -9,6 +9,6 @@ module.exports = {
         "ie > 8",
       ]
     },
-    "postcss-px2rem": { remUnit: 50, custom: { 75: ['index'] } }
+    "postcss-px2rem": { remUnit: 50 }
   }
 }
