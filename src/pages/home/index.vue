@@ -15,7 +15,7 @@
       </router-link>
     </div>
     <AppFooter/>
-    <Search/>
+    <Search  v-if="searchDisplay"/>
   </div>
 </template>
 <script src='./index.js'></script>

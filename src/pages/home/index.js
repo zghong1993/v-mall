@@ -29,6 +29,11 @@ export default {
     this.bannerHeight = `${(screen.width * 2) / bannerImageRadio}px`
     homeServ.getHomeList().then(d => this.homeList = d)
   },
+  computed: {
+    searchDisplay() {
+      return this.$store.state.showSearch
+    },
+  },
   methods: {
     handleRecommendListScroll(e) {
       const offsetY = e.nativeEvent.contentOffset.y
