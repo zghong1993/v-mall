@@ -11,17 +11,21 @@
   </div>
 </template>
 <script>
-  export default {
-    name: 'app',
-  }
+export default {
+  name: 'app',
+}
 </script>
 <style lang='less' scoped>
-  .slide-left-enter-active {
-    left: 100%;
-    transition: left .5s;
-  }
+#app {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.slide-left-enter-active {
+  left: 100%;
+  transition: left 0.5s;
+}
 
-  .slide-left-enter-to {
-    left: 0;
-  }
+.slide-left-enter-to {
+  left: 0;
+}
 </style>

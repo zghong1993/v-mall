@@ -11,6 +11,7 @@
 6. 引入fly.js 作为http 请求库
 7. 升级webpack4 ,删除vue-cli生成的build 文件夹,自己搭建webpack.config.js
 8. 引入 px2rem, 直接写设计图750的尺寸,自动转换为rem,第三方ui库也自动转换,适配[阿里高清方案](https://www.jianshu.com/p/985d26b40199)
+9. 兼容iphonex [凹凸h5iphonex解决方案](https://aotu.io/notes/2017/11/27/iphonex/index.html)
 
 
 ## Build Setup
