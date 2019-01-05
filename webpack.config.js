@@ -11,7 +11,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const resolve = dir => path.join(__dirname, dir)
 // 配置cdn
-const PUBLIC_PATH = 'http://cdn.example.com/assets/[hash]/'
+const PUBLIC_PATH = '/'
 
 
 module.exports = (_, argv = { mode: 'development', analyz: false }) => {
