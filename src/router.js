@@ -2,37 +2,36 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { loginServ } from './service'
 
-
 Vue.use(Router)
 
-const Home = resolve => require(['@/pages/home/index.vue'], resolve)
-const Category = resolve => require(['@/pages/category/index.vue'], resolve)
-const Item = resolve => require(['@/pages/item/index.vue'], resolve)
-const Login = resolve => require(['@/pages/login/index.vue'], resolve)
+const Home = () => import('@/pages/home/index.vue')
+const Category = () => import('@/pages/category/index.vue')
+const Item = () => import('@/pages/item/index.vue')
+const Login = () => import('@/pages/login/index.vue')
 
 // user
-const UserIndex = resolve => require(['@/pages/user/index/index.vue'], resolve)
-const UserCenter = resolve => require(['@/pages/user/user_center/index.vue'], resolve)
+const UserIndex = () => import('@/pages/user/index/index.vue')
+const UserCenter = () => import('@/pages/user/user_center/index.vue')
 
 // item
 
-const Search = resolve => require(['@/pages/search/index.vue'], resolve)
-
+const Search = () => import('@/pages/search/index.vue')
 
 // trade
-const TradeIndex = resolve => require(['@/pages/trade/index/index.vue'], resolve)
-const Cart = resolve => require(['@/pages/trade/cart/index.vue'], resolve)
-
+const TradeIndex = () => import('@/pages/trade/index/index.vue')
+const Cart = () => import('@/pages/trade/cart/index.vue')
 
 // call fun
 const checkLogin = (to, from, next) => {
-  loginServ.checkLogin().then(() => {
-    next()
-  }, () => {
-    next('/login')
-  })
+  loginServ.checkLogin().then(
+    () => {
+      next()
+    },
+    () => {
+      next('/login')
+    },
+  )
 }
-
 
 export default new Router({
   mode: 'history',

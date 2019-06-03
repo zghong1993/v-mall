@@ -1,11 +1,10 @@
 {
-  "presets": [
-    "env"
-  ],
+  "presets": ["env"],
   "plugins": [
     "transform-object-rest-spread",
     "transform-decorators-legacy",
     "transform-async-to-generator",
+    "syntax-dynamic-import",
     [
       "transform-runtime",
       {

@@ -1,19 +1,19 @@
 <template>
-  <div id='app'>
-    <transition name='slide-left' mode='out-in'>
+  <div id="app">
+    <transition name="slide-left" mode="out-in">
       <keep-alive>
         <router-view v-if="$route.meta.keepAlive"></router-view>
       </keep-alive>
     </transition>
-    <transition name='slide-left' mode='out-in'>
+    <transition name="slide-left" mode="out-in">
       <router-view v-if="!$route.meta.keepAlive"></router-view>
     </transition>
   </div>
 </template>
 <script>
 export default {
-  name: 'app',
-}
+  name: "app"
+};
 </script>
 <style lang='less' scoped>
 #app {
