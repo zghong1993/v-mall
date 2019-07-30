@@ -1,0 +1,39 @@
+@import '~@/assets/css/variables';
+@import '~@/assets/css/lib';
+.home {
+  .swiper {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .home-list {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 12px;
+    background: @white;
+    margin-bottom: 50px;
+    .item {
+      width: 33.33%;
+      padding: 5px;
+      border-right: .5px solid @darkgray;
+      border-bottom: 1px solid @darkgray;
+      &.last {
+        border-right: 1px solid transparent;
+      }
+      img {
+        width: 100%;
+        height: 100px;
+        display: block;
+        margin: 0 auto 20px;
+      }
+      .item-name {
+        .txt-ellipsis(1)
+      }
+      .price {
+        color: red;
+        vertical-align: -webkit-baseline-middle;
+      }
+    }
+  }
+}

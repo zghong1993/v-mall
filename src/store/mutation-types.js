@@ -1,0 +1,2 @@
+export const TOGGLE_SEARCH = 'TOGLE_SEARCH'
+export const TOGGLE_SEARCH1 = 'TOGLE_SEARCH1'

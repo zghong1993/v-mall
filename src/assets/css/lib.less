@@ -1,0 +1,49 @@
+@import 'variables';
+.txt-ellipsis(@lineNumber: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: @lineNumber;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.scroll-wrap {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-chaining: chained;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clear:after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.page-stickup-iphonex {
+  margin-bottom: constant(safe-area-inset-bottom);
+  margin-bottom: env(safe-area-inset-bottom);
+}

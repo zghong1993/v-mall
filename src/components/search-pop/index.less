@@ -1,0 +1,46 @@
+@import '~@/assets/css/variables';
+.search {
+  &.active {
+    top: 0;
+  }
+  transition: top .2s ease;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  overflow: auto;
+  z-index: 3;
+  background: #fff;
+  p {
+    height: 50px;
+    line-height: 50px;
+    input {
+      width: 90%;
+      height: 35px;
+      line-height: 35px;
+      background: #f5f5f5;
+      vertical-align: middle;
+    }
+    span.text-center {
+      float: right;
+      width: 10%;
+    }
+  }
+  .search-history {
+    border-top: 1px solid #dedede;
+    padding: 0 10px;
+    .icon-delete {
+      width: 100px;
+    }
+    ul {
+      margin: 5px;
+      display: flex;
+      flex-flow: row wrap;
+      li {
+        padding: 8px 15px;
+        border: 1px solid @darkgray;
+        margin: 0 10px 10px 0;
+      }
+    }
+  }
+}
